@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Yoneison Bayona</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mouse-glow"></div>
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+
+    <!-- ============================= -->
+    <!-- NAVBAR                        -->
+    <!-- ============================= -->
+
+    <header class="header">
+        <div class="container navbar">
+
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html"><i data-lucide="house"></i>Inicio</a></li>
+                    <li><a href="about.html"><i data-lucide="user"></i>Sobre mí</a></li>
+                    <li><a href="services.html"><i data-lucide="layers-3"></i>Servicios</a></li>
+                    <li><a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a></li>
+                    <li><a href="blog.html"><i data-lucide="pen-line"></i>Blog</a></li>
+                    <li><a href="contact.html" class="active"><i data-lucide="message-square"></i>Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="dark-mode-btn" id="theme-toggle"><i data-lucide="moon"></i></button>
+                <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle"><i data-lucide="menu"></i></button>
+
+        </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- MOBILE MENU                   -->
+    <!-- ============================= -->
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2><span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+            <button class="close-menu" id="close-menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html"><i data-lucide="house"></i>Inicio</a>
+            <a href="about.html"><i data-lucide="user"></i>Sobre mí</a>
+            <a href="services.html"><i data-lucide="layers-3"></i>Servicios</a>
+            <a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a>
+            <a href="blog.html"><i data-lucide="pen-line"></i>Blog</a>
+            <a href="contact.html" class="active"><i data-lucide="message-square"></i>Contacto</a>
+        </nav>
+        <div class="mobile-bottom">
+            <button class="mobile-theme" id="mobile-theme-toggle">
+                <i data-lucide="moon"></i>Cambiar apariencia
+            </button>
+            <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- ============================= -->
+    <!-- MAIN                          -->
+    <!-- ============================= -->
+
+    <main class="main">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- ======================== -->
+                <!-- SIDEBAR — PROFILE CARD   -->
+                <!-- ======================== -->
+
+                <aside class="contact-sidebar">
+                    <section class="profile-card card">
+
+                        <div class="profile-image">
+                            <img src="../assets/images/profile.png" alt="Yoneison Bayona">
+                        </div>
+
+                        <div class="profile-info">
+                            <h1>Yoneison Bayona <span>👋</span></h1>
+
+                            <p class="profile-description">
+                                <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo Web</strong>
+                                ayudando a empresas a <strong>crecer</strong>, <strong>vender más</strong> y
+                                <strong>escalar su presencia digital</strong>.
+                            </p>
+
+                            <div class="profile-buttons">
+                                <a href="contact.html" class="btn-primary">Agendar Consultoría</a>
+                                <button class="btn-secondary" onclick="copyEmail()">Copiar Email</button>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/bayonaagency/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/bayonaagency" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://wa.me/573003590390" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                    </section>
+                </aside>
+
+                <!-- ======================== -->
+                <!-- CONTENIDO PRINCIPAL      -->
+                <!-- ======================== -->
+
+                <div class="contact-content">
+                    <div class="card contact-single-card">
+
+                        <!-- SECCIÓN 1 — Hero -->
+                        <div class="contact-hero-section">
+                            <div class="contact-hero-top">
+                                <h2 class="contact-title">
+                                    Trabajemos <span class="wave-emoji">👋</span> <span
+                                        class="contact-highlight">Juntos</span>
+                                </h2>
+                                <span class="available-pill">Disponible para trabajar</span>
+                            </div>
+
+                            <p class="contact-intro">
+                                Estoy aquí para ayudarte si buscas un <strong>consultor de marketing</strong> que lleve
+                                tu idea al siguiente nivel o un <strong>desarrollador web</strong> que haga crecer tu
+                                negocio.
+                            </p>
+
+                            <div class="contact-info-row">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">
+                                        <i data-lucide="mail"></i>
+                                    </div>
+                                    <div class="contact-info-text">
+                                        <span class="contact-info-label">Email</span>
+                                        <span class="contact-info-value">yoneisonbayona@gmail.com</span>
+                                    </div>
+                                </div>
+                                <a class="contact-info-item contact-info-link" href="https://wa.me/573003590390"
+                                    target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">
+                                    <div class="contact-info-icon contact-info-icon--wa">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="contact-info-text">
+                                        <span class="contact-info-label">WhatsApp</span>
+                                        <span class="contact-info-value">+57 300 359 0390</span>
+                                    </div>
+                                </a>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">
+                                        <i data-lucide="map-pin"></i>
+                                    </div>
+                                    <div class="contact-info-text">
+                                        <span class="contact-info-label">Ubicación</span>
+                                        <span class="contact-info-value">Magangué, Bolívar · Colombia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECCIÓN 2 — Formulario -->
+                        <div class="contact-section-block">
+                            <h3 class="contact-section-label">Envíame un mensaje ✉️</h3>
+
+                            <form class="contact-form" id="contactForm" novalidate>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="nombre">Nombre</label>
+                                        <input type="text" id="nombre" name="nombre" class="form-input"
+                                            placeholder="Tu nombre" required>
+                                        <span class="form-error-msg" id="err-nombre">El nombre es obligatorio.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input type="email" id="email" name="email" class="form-input"
+                                            placeholder="tu@email.com" required>
+                                        <span class="form-error-msg" id="err-email">Introduce un email válido.</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="asunto">Asunto</label>
+                                        <input type="text" id="asunto" name="asunto" class="form-input"
+                                            placeholder="¿En qué te puedo ayudar?" required>
+                                        <span class="form-error-msg" id="err-asunto">El asunto es obligatorio.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="presupuesto">Presupuesto</label>
+                                        <select id="presupuesto" name="presupuesto" class="form-select">
+                                            <option value="" disabled selected>Seleccionar...</option>
+                                            <option value="menos-500">Menos de $500</option>
+                                            <option value="500-1500">$500 – $1,500</option>
+                                            <option value="1500-3000">$1,500 – $3,000</option>
+                                            <option value="3000-5000">$3,000 – $5,000</option>
+                                            <option value="mas-5000">Más de $5,000</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="whatsapp">WhatsApp <span
+                                            class="form-label-optional">(opcional)</span></label>
+                                    <div class="form-input-icon">
+                                        <i class="fa-brands fa-whatsapp form-icon-wa"></i>
+                                        <input type="tel" id="whatsapp" name="whatsapp" class="form-input form-input--icon"
+                                            placeholder="+57 300 000 0000">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="mensaje">Comentario</label>
+                                    <textarea id="mensaje" name="mensaje" class="form-textarea"
+                                        placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                                    <span class="form-error-msg" id="err-mensaje">El comentario es obligatorio.</span>
+                                </div>
+
+                                <button type="submit" class="btn-send">
+                                    Enviar mensaje
+                                    <i data-lucide="send"></i>
+                                </button>
+                            </form>
+
+                            <div class="form-success" id="formSuccess">
+                                <div class="success-icon">
+                                    <i data-lucide="check-circle"></i>
+                                </div>
+                                <h4>¡Mensaje enviado! 🎉</h4>
+                                <p>Gracias por escribirme. Te responderé en menos de 24 horas.</p>
+                            </div>
+                        </div>
+
+                        <!-- SECCIÓN 3 — Mapa -->
+                        <div class="contact-map-section">
+                            <iframe
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=-74.7579%2C9.2413%2C-74.7519%2C9.2473&layer=mapnik&marker=9.2443%2C-74.7549"
+                                class="map-iframe" loading="lazy" title="Ubicación — Magangué, Bolívar, Colombia">
+                            </iframe>
+                            <div class="map-label">
+                                <i data-lucide="map-pin"></i>
+                                Cl. 16a # 13-124, Magangué, Bolívar · Colombia
+                            </div>
+                        </div>
+
+                        <!-- SECCIÓN 4 — FAQ -->
+                        <div class="contact-section-block">
+                            <h3 class="contact-section-label">Preguntas frecuentes 💬</h3>
+
+                            <div class="faq-list">
+
+                                <div class="faq-item active">
+                                    <button class="faq-question">
+                                        ¿Qué tipo de proyectos realizas?
+                                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Trabajo en proyectos de diseño y desarrollo web, consultoría de marketing
+                                            digital, estrategias en redes sociales, automatización de ventas y embudos
+                                            de conversión para empresas y emprendedores.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        ¿Cuánto tiempo tarda en completarse un proyecto?
+                                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>El tiempo depende del alcance del proyecto. Un sitio web suele tardar entre 1
+                                            y 4 semanas. Las estrategias de marketing tienen un seguimiento mensual
+                                            continuo. Siempre defino tiempos claros desde el inicio.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        ¿Trabajas con clientes fuera de Colombia?
+                                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Sí, trabajo con clientes de toda Latinoamérica y España. La comunicación es
+                                            completamente online y me adapto a diferentes zonas horarias sin problema.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        ¿Cuál es el proceso para comenzar?
+                                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Primero hacemos una consultoría inicial gratuita para entender tu negocio y
+                                            objetivos. Luego elaboro una propuesta personalizada con plan de trabajo,
+                                            tiempos y presupuesto. Una vez aprobada, comenzamos.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        ¿Ofreces garantía de resultados?
+                                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Garantizo transparencia, dedicación y estrategias basadas en datos reales. Mi
+                                            compromiso es optimizar continuamente para alcanzar los objetivos definidos
+                                            desde el inicio del proyecto.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================= -->
+    <!-- FOOTER                        -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                © 2026 Diseñado & Desarrollado por <strong>Yoneison Bayona</strong> · Bayona Agency
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = btn.closest('.faq-item');
+                var isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function (i) {
+                    i.classList.remove('active');
+                });
+                if (!isActive) item.classList.add('active');
+                lucide.createIcons();
+            });
+        });
+
+        // Form — validación + envío a FormSubmit
+        (function () {
+            var fields = [
+                { id: 'nombre',  errId: 'err-nombre',  validate: function (v) { return v.trim().length > 0; } },
+                { id: 'email',   errId: 'err-email',   validate: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); } },
+                { id: 'asunto',  errId: 'err-asunto',  validate: function (v) { return v.trim().length > 0; } },
+                { id: 'mensaje', errId: 'err-mensaje', validate: function (v) { return v.trim().length > 0; } }
+            ];
+
+            // Limpiar error al escribir
+            fields.forEach(function (f) {
+                document.getElementById(f.id).addEventListener('input', function () {
+                    this.classList.remove('is-error');
+                    document.getElementById(f.errId).classList.remove('visible');
+                });
+            });
+
+            function validateAll() {
+                var ok = true;
+                fields.forEach(function (f) {
+                    var el = document.getElementById(f.id);
+                    if (!f.validate(el.value)) {
+                        el.classList.add('is-error');
+                        document.getElementById(f.errId).classList.add('visible');
+                        ok = false;
+                    }
+                });
+                return ok;
+            }
+
+            document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                if (!validateAll()) return;
+
+                var form = this;
+                var btn = form.querySelector('.btn-send');
+
+                btn.disabled = true;
+                btn.textContent = 'Enviando...';
+
+                try {
+                    var response = await fetch('https://formsubmit.co/ajax/yoneisonbayona@gmail.com', {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: new FormData(form)
+                    });
+
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        var success = document.getElementById('formSuccess');
+                        success.classList.add('active');
+                        lucide.createIcons();
+                    } else {
+                        btn.disabled = false;
+                        btn.textContent = 'Enviar mensaje';
+                        alert('Ocurrió un error. Por favor intenta de nuevo.');
+                    }
+                } catch (err) {
+                    btn.disabled = false;
+                    btn.textContent = 'Enviar mensaje';
+                    alert('Sin conexión. Por favor intenta de nuevo.');
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

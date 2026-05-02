@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoneison Bayona | Consultor de Marketing Estratégico</title>
+
+    <!-- Google Fonts -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome (iconos de redes sociales) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mouse-glow"></div>
+
+    <!-- Background Shapes -->
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+
+    <!-- ===================== -->
+    <!-- NAVBAR -->
+    <!-- ===================== -->
+
+    <header class="header">
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Menú principal -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#" class="active"><i data-lucide="house"></i>Inicio</a></li>
+                    <li><a href="pages/about.html"><i data-lucide="user"></i>Sobre mí</a></li>
+                    <li><a href="pages/services.html"><i data-lucide="layers-3"></i>Servicios</a></li>
+                    <li><a href="pages/works.html"><i data-lucide="briefcase"></i>Obras</a></li>
+                    <li><a href="pages/blog.html"><i data-lucide="pen-line"></i>Blog</a></li>
+                    <li><a href="pages/contact.html"><i data-lucide="message-square"></i>Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Acciones -->
+            <div class="nav-actions">
+                <button class="dark-mode-btn" id="theme-toggle">
+                    <i data-lucide="moon"></i>
+                </button>
+                <a href="#" class="btn-navbar">
+                    Hablemos
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" id="menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- MOBILE SIDEBAR -->
+    <!-- ============================= -->
+
+    <div class="mobile-menu" id="mobile-menu">
+
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="#" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+            <button class="close-menu" id="close-menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+            <a href="#" class="active"><i data-lucide="house"></i>Inicio</a>
+            <a href="pages/about.html"><i data-lucide="user"></i>Sobre mí</a>
+            <a href="pages/services.html"><i data-lucide="layers-3"></i>Servicios</a>
+            <a href="pages/works.html"><i data-lucide="briefcase"></i>Trabajos</a>
+            <a href="pages/blog.html"><i data-lucide="pen-line"></i>Blog</a>
+            <a href="pages/contact.html"><i data-lucide="message-square"></i>Contacto</a>
+        </nav>
+
+        <div class="mobile-bottom">
+            <button class="mobile-theme" id="mobile-theme-toggle">
+                <i data-lucide="moon"></i>
+                Cambiar apariencia
+            </button>
+            <a href="#" class="btn-navbar">
+                Hablemos
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Overlay oscuro -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- ============================= -->
+    <!-- MAIN — BENTO GRID -->
+    <!-- ============================= -->
+
+    <main class="main">
+        <div class="container">
+            <div class="bento-grid">
+
+                <!-- ======================== -->
+                <!-- PROFILE CARD (izquierda) -->
+                <!-- ======================== -->
+
+                <section class="profile-card card">
+
+                    <div class="profile-image">
+                        <img src="assets/images/profile.png" alt="Yoneison Bayona">
+                    </div>
+
+                    <div class="profile-info">
+
+                        <h1>Yoneison Bayona <span>👋</span></h1>
+
+                        <p class="profile-description">
+                            <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo Web</strong>
+                            ayudando a empresas a <strong>crecer</strong>, <strong>vender más</strong> y <strong>escalar
+                                su presencia digital</strong>.
+                        </p>
+
+                        <div class="profile-buttons">
+                            <a href="pages/contact.html" class="btn-primary">Agendar Consultoría</a>
+                            <button class="btn-secondary" onclick="copyEmail()">Copiar Email</button>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/bayonaagency/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/bayonaagency" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://wa.me/573003590390" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ======================== -->
+                <!-- BENTO CARDS -->
+                <!-- ======================== -->
+
+                <!-- Experiencia Laboral -->
+                <div class="card experience-card">
+                    <h3>Experiencia Laboral</h3>
+                    <div class="experience-scroll-wrapper">
+                        <ul class="experience-track">
+
+                            <!-- Items originales -->
+                            <li>
+                                <span class="exp-year">2022–2024</span>
+                                <div class="exp-info">
+                                    <strong>Consultor Estratégico</strong>
+                                    <span>Bayona Agency</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="exp-year">2021–2024</span>
+                                <div class="exp-info">
+                                    <strong>Marketing Digital</strong>
+                                    <span>Freelance</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="exp-year">2020–2021</span>
+                                <div class="exp-info">
+                                    <strong>Desarrollo Web</strong>
+                                    <span>Freelance</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="exp-year">2018–2020</span>
+                                <div class="exp-info">
+                                    <strong>Vendedor Digital</strong>
+                                    <span>E-commerce</span>
+                                </div>
+                            </li>
+
+                            <!-- Duplicado para loop infinito -->
+                            <li>
+                                <span class="exp-year">2022–2024</span>
+                                <div class="exp-info">
+                                    <strong>Consultor Estratégico</strong>
+                                    <span>Bayona Agency</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="exp-year">2021–2024</span>
+                                <div class="exp-info">
+                                    <strong>Marketing Digital</strong>
+                                    <span>Freelance</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="exp-year">2020–2021</span>
+                                <div class="exp-info">
+                                    <strong>Desarrollo Web</strong>
+                                    <span>Freelance</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="exp-year">2018–2020</span>
+                                <div class="exp-info">
+                                    <strong>Vendedor Digital</strong>
+                                    <span>E-commerce</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Área de Expertise -->
+                <div class="card skills-card">
+                    <h3>Área de Expertise</h3>
+                    <div class="skills-grid">
+
+                        <div class="skill-item">
+                            <iconify-icon icon="simple-icons:openai" class="skill-icon"></iconify-icon>
+                            <span>OpenAI</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <iconify-icon icon="simple-icons:anthropic" class="skill-icon"></iconify-icon>
+                            <span>Claude</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <iconify-icon icon="simple-icons:meta" class="skill-icon"></iconify-icon>
+                            <span>Meta</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <iconify-icon icon="simple-icons:wordpress" class="skill-icon"></iconify-icon>
+                            <span>WordPress</span>
+                        </div>
+
+                        <div class="skill-item">
+                            <iconify-icon icon="simple-icons:googleads" class="skill-icon"></iconify-icon>
+                            <span>Google Ads</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Columna derecha — una sola card con proyectos + CTA -->
+                <div class="card right-card">
+
+                    <!-- Proyectos Recientes -->
+                    <div class="projects-header">
+                        <h3>Proyectos Recientes</h3>
+                        <a href="pages/works.html" class="link-primary">Ver todos →</a>
+                    </div>
+
+                    <div class="projects-list">
+
+                        <div class="project-thumb"
+                            onclick="openModal('assets/images/tienda.png', 'Tienda Online', 'Desarrollo Web')">
+                            <img src="assets/images/tienda.png" alt="Tienda Online" class="project-img">
+                            <div class="project-overlay">
+                                <i data-lucide="zoom-in"></i>
+                            </div>
+                            <span class="project-tag">Desarrollo Web</span>
+                        </div>
+
+                        <div class="project-thumb"
+                            onclick="openModal('assets/images/app-morty.png', 'Rick & Morty App', 'JavaScript / API')">
+                            <img src="assets/images/app-morty.png" alt="Rick & Morty App" class="project-img">
+                            <div class="project-overlay">
+                                <i data-lucide="zoom-in"></i>
+                            </div>
+                            <span class="project-tag">JavaScript / API</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Divisor -->
+                    <div class="right-card-divider"></div>
+
+                    <!-- CTA -->
+                    <div class="ticker-wrapper">
+                        <div class="ticker-track">
+                            <span>🚀 Llevamos tu empresa a escalar sus ventas</span>
+                            <span>📈 Estrategias digitales que generan resultados reales</span>
+                            <span>💡 Marketing estratégico & Desarrollo Web profesional</span>
+                            <span>🚀 Llevamos tu empresa a escalar sus ventas</span>
+                            <span>📈 Estrategias digitales que generan resultados reales</span>
+                            <span>💡 Marketing estratégico & Desarrollo Web profesional</span>
+                        </div>
+                    </div>
+
+                    <span class="badge">✦ Disponible para trabajar</span>
+                    <h2>Trabajemos <span>👋</span><br>Juntos</h2>
+                    <a href="pages/contact.html" class="link-primary">Hablemos ↘</a>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================= -->
+    <!-- FOOTER                      -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                © 2026 Diseñado & Desarrollado por <strong>Yoneison Bayona</strong> · Bayona Agency
+            </p>
+        </div>
+    </footer>
+
+    <!-- ============================= -->
+    <!-- MODAL DE PROYECTOS          -->
+    <!-- ============================= -->
+
+    <div class="modal-overlay" id="projectModal" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">
+                <i data-lucide="x"></i>
+            </button>
+            <img src="" alt="" id="modalImg" class="modal-img">
+            <div class="modal-info">
+                <span class="project-tag" id="modalTag"></span>
+                <p id="modalTitle"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lucide (iconos UI) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Iconify (logos de marcas) -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+    <!-- JAVASCRIPT PRINCIPAL -->
+    <script src="js/main.js"></script>
+
+    <!-- ANIMACIONES -->
+    <script src="js/animations.js"></script>
+
+    <!-- INICIALIZAR ICONOS -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        function openModal(src, title, tag) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modalImg').alt = title;
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalTag').textContent = tag;
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body>
+
+</html>

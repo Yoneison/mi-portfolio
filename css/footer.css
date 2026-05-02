@@ -1,0 +1,91 @@
+/* ============================= */
+/* FOOTER                        */
+/* ============================= */
+
+.footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================= */
+/* MARCA                         */
+/* ============================= */
+
+.footer-brand .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.footer-brand .logo-text h2 {
+    font-size: 15px;
+}
+
+.footer-brand .logo-text span {
+    font-size: 9px;
+}
+
+/* ============================= */
+/* TEXTO                         */
+/* ============================= */
+
+.footer-copy {
+    font-size: 13px;
+    color: var(--secondary-text);
+    text-align: center;
+}
+
+.footer-copy strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ============================= */
+/* REDES SOCIALES                */
+/* ============================= */
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-text);
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+}

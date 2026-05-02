@@ -1,0 +1,436 @@
+/* ============================= */
+/* ABOUT GRID                    */
+/* ============================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* ========================
+   SIDEBAR STICKY
+   (como WooCommerce)
+   ======================== */
+
+.about-sidebar {
+    position: sticky;
+    top: 90px; /* altura del navbar */
+}
+
+/* ============================= */
+/* CONTENIDO DERECHO             */
+/* ============================= */
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+/* ============================= */
+/* HERO CARD                     */
+/* ============================= */
+
+.about-hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-hero-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.about-title {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+.about-highlight {
+    color: var(--primary);
+}
+
+.available-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.available-pill::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    flex-shrink: 0;
+    animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1;   transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+.about-intro {
+    font-size: 15px;
+    color: var(--secondary-text);
+    line-height: 1.8;
+}
+
+.about-intro strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* ============================= */
+/* MÉTRICAS + SCROLL INDICATOR   */
+/* ============================= */
+
+.metrics-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.metrics-inline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex: 1;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metric-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+}
+
+.metric-lbl {
+    font-size: 12px;
+    color: var(--secondary-text);
+    font-weight: 500;
+}
+
+.metric-divider {
+    width: 1px;
+    height: 48px;
+    background: var(--border);
+    margin: 0 24px;
+    flex-shrink: 0;
+}
+
+/* ============================= */
+/* SCROLL INDICATOR              */
+/* ============================= */
+
+.scroll-indicator {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.scroll-svg {
+    width: 90px;
+    height: 90px;
+    animation: spin-text 10s linear infinite;
+    transform-origin: center center;
+    overflow: visible;
+}
+
+.scroll-svg text {
+    fill: var(--text);
+    font-size: 11.5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@keyframes spin-text {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.scroll-arrow-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.scroll-arrow-center svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================= */
+/* SECTION LABELS                */
+/* ============================= */
+
+.section-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.section-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-header-row .section-label {
+    margin-bottom: 0;
+}
+
+/* ============================= */
+/* TOOLS LOGOS GRID              */
+/* ============================= */
+
+.tools-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.tool-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    cursor: default;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tool-logo-item:hover {
+    transform: translateY(-3px);
+    background: var(--surface-hover);
+}
+
+.tool-logo-icon {
+    font-size: 32px;
+    color: var(--text);
+}
+
+.tool-logo-item span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    white-space: nowrap;
+}
+
+/* ============================= */
+/* TESTIMONIOS                   */
+/* ============================= */
+
+.testi-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.testi-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.testi-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.testi-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.testi-slider-wrapper {
+    overflow: hidden;
+}
+
+.testi-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.testimonial-card {
+    flex-shrink: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.testi-stars {
+    color: #FBBF24;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.testimonial-card p {
+    font-size: 13px;
+    color: var(--secondary-text);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.testi-author {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.testi-author strong {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.testi-author span {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+/* ============================= */
+/* CTA CARD                      */
+/* ============================= */
+
+.about-cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.about-cta-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.about-cta-text p {
+    font-size: 14px;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 1100px) {
+    .about-grid {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .tools-logos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* En móvil la sidebar NO es sticky */
+    .about-sidebar {
+        position: static;
+    }
+
+    .tools-logos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-title {
+        font-size: 22px;
+    }
+
+    .tools-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metrics-inline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .metric-divider {
+        display: none;
+    }
+
+    .about-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .metric-num {
+        font-size: 26px;
+    }
+}

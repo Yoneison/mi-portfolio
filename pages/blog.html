@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Bayona Agency — Marketing Digital & Diseño Web</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mouse-glow"></div>
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+
+    <!-- ============================= -->
+    <!-- NAVBAR                        -->
+    <!-- ============================= -->
+
+    <header class="header">
+        <div class="container navbar">
+
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html"><i data-lucide="house"></i>Inicio</a></li>
+                    <li><a href="about.html"><i data-lucide="user"></i>Sobre mí</a></li>
+                    <li><a href="services.html"><i data-lucide="layers-3"></i>Servicios</a></li>
+                    <li><a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a></li>
+                    <li><a href="blog.html" class="active"><i data-lucide="pen-line"></i>Blog</a></li>
+                    <li><a href="contact.html"><i data-lucide="message-square"></i>Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="dark-mode-btn" id="theme-toggle"><i data-lucide="moon"></i></button>
+                <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle"><i data-lucide="menu"></i></button>
+
+        </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- MOBILE MENU                   -->
+    <!-- ============================= -->
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2><span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+            <button class="close-menu" id="close-menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html"><i data-lucide="house"></i>Inicio</a>
+            <a href="about.html"><i data-lucide="user"></i>Sobre mí</a>
+            <a href="services.html"><i data-lucide="layers-3"></i>Servicios</a>
+            <a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a>
+            <a href="blog.html" class="active"><i data-lucide="pen-line"></i>Blog</a>
+            <a href="contact.html"><i data-lucide="message-square"></i>Contacto</a>
+        </nav>
+        <div class="mobile-bottom">
+            <button class="mobile-theme" id="mobile-theme-toggle">
+                <i data-lucide="moon"></i>Cambiar apariencia
+            </button>
+            <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- ============================= -->
+    <!-- MAIN                          -->
+    <!-- ============================= -->
+
+    <main class="main">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- ======================== -->
+                <!-- SIDEBAR — PROFILE CARD   -->
+                <!-- ======================== -->
+
+                <aside class="blog-sidebar">
+                    <section class="profile-card card">
+
+                        <div class="profile-image">
+                            <img src="../assets/images/profile.png" alt="Yoneison Bayona">
+                        </div>
+
+                        <div class="profile-info">
+                            <h1>Yoneison Bayona <span>👋</span></h1>
+
+                            <p class="profile-description">
+                                <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo Web</strong>
+                                ayudando a empresas a <strong>crecer</strong>, <strong>vender más</strong> y
+                                <strong>escalar su presencia digital</strong>.
+                            </p>
+
+                            <div class="profile-buttons">
+                                <a href="contact.html" class="btn-primary">Agendar Consultoría</a>
+                                <button class="btn-secondary" onclick="copyEmail()">Copiar Email</button>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/bayonaagency/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/bayonaagency" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://wa.me/573003590390" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                    </section>
+                </aside>
+
+                <!-- ======================== -->
+                <!-- CONTENIDO — BLOG         -->
+                <!-- ======================== -->
+
+                <div class="blog-content">
+
+                    <!-- CABECERA -->
+                    <div class="card blog-header-card">
+                        <div class="blog-header-top">
+                            <div>
+                                <h2 class="blog-title">
+                                    Recursos & <span class="blog-highlight">Estrategias</span> de Crecimiento
+                                </h2>
+                                <p class="blog-subtitle">
+                                    Artículos sobre marketing digital, diseño web y estrategias que ayudan a empresas
+                                    a captar más clientes y aumentar sus ventas en el mundo digital.
+                                </p>
+                            </div>
+                            <span class="blog-pill">Nuevo cada semana</span>
+                        </div>
+
+                        <!-- FILTROS -->
+                        <div class="blog-filters" id="blogFilters">
+                            <button class="blog-filter-btn active" data-filter="all">Todos</button>
+                            <button class="blog-filter-btn" data-filter="marketing">Marketing Digital</button>
+                            <button class="blog-filter-btn" data-filter="web">Diseño Web</button>
+                            <button class="blog-filter-btn" data-filter="ux">UX / UI</button>
+                            <button class="blog-filter-btn" data-filter="branding">Branding</button>
+                            <button class="blog-filter-btn" data-filter="seo">SEO</button>
+                        </div>
+                    </div>
+
+                    <!-- POST DESTACADO -->
+                    <a href="blog/diseno-web-que-vende.html" class="blog-featured" data-category="web">
+                        <div class="blog-featured-banner cat-web">
+                            <div class="banner-pattern"></div>
+                            <span class="banner-icon">🎨</span>
+                            <span class="featured-badge">✦ Artículo Destacado</span>
+                        </div>
+                        <div class="blog-featured-body">
+                            <span class="blog-category-badge badge-web">Diseño Web</span>
+                            <h3 class="blog-featured-title">
+                                Diseño Web que Vende: Los 7 Elementos Clave que tu Sitio debe Tener en 2026
+                            </h3>
+                            <p class="blog-featured-excerpt">
+                                Descubre por qué el 94% de las primeras impresiones online son de diseño. Aprende los
+                                elementos
+                                que separan un sitio que pierde clientes de uno que los convierte en ventas constantes.
+                            </p>
+                            <div class="blog-post-meta">
+                                <span><i data-lucide="calendar"></i> 28 Abr 2026</span>
+                                <span><i data-lucide="clock"></i> 7 min lectura</span>
+                                <span><i data-lucide="eye"></i> 1.2k vistas</span>
+                            </div>
+                            <span class="blog-readmore">Leer artículo <i data-lucide="arrow-right"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- GRID DE POSTS -->
+                    <div class="blog-posts-grid" id="blogPostsGrid">
+
+                        <!-- Post 1 — Marketing Digital -->
+                        <a href="blog/marketing-digital-pymes.html" class="blog-card" data-category="marketing">
+                            <div class="blog-card-banner cat-marketing">
+                                <div class="banner-pattern"></div>
+                                <span class="banner-icon">📈</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-category-badge badge-marketing">Marketing Digital</span>
+                                <h3 class="blog-card-title">Marketing Digital para PYMEs: Estrategias que Generan
+                                    Resultados Reales</h3>
+                                <p class="blog-card-excerpt">
+                                    Las grandes empresas no tienen el monopolio del marketing digital. Descubre cómo
+                                    pequeñas y medianas empresas consiguen clientes sin presupuestos millonarios.
+                                </p>
+                                <div class="blog-card-footer">
+                                    <div class="blog-post-meta">
+                                        <span><i data-lucide="calendar"></i> 21 Abr 2026</span>
+                                        <span><i data-lucide="clock"></i> 6 min</span>
+                                    </div>
+                                    <span class="blog-readmore">Leer <i data-lucide="arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Post 2 — UX/UI -->
+                        <a href="blog/ux-ui-secreto-exito.html" class="blog-card" data-category="ux">
+                            <div class="blog-card-banner cat-ux">
+                                <div class="banner-pattern"></div>
+                                <span class="banner-icon">✨</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-category-badge badge-ux">UX / UI</span>
+                                <h3 class="blog-card-title">UX/UI: Por qué el Buen Diseño es tu Vendedor más Eficiente
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    Un buen UX puede incrementar las conversiones hasta un 400%. Aprende cómo
+                                    la experiencia de usuario se traduce directamente en más ventas para tu negocio.
+                                </p>
+                                <div class="blog-card-footer">
+                                    <div class="blog-post-meta">
+                                        <span><i data-lucide="calendar"></i> 14 Abr 2026</span>
+                                        <span><i data-lucide="clock"></i> 5 min</span>
+                                    </div>
+                                    <span class="blog-readmore">Leer <i data-lucide="arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Post 3 — Tendencias -->
+                        <a href="blog/tendencias-web-2026.html" class="blog-card" data-category="web">
+                            <div class="blog-card-banner cat-tendencias">
+                                <div class="banner-pattern"></div>
+                                <span class="banner-icon">🚀</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-category-badge badge-tendencias">Tendencias 2026</span>
+                                <h3 class="blog-card-title">Tendencias Web 2026: Lo que las Empresas Exitosas ya Aplican
+                                </h3>
+                                <p class="blog-card-excerpt">
+                                    El mundo digital evoluciona a velocidad de vértigo. Descubre las tendencias
+                                    que marcan la diferencia entre estar adelante o quedar obsoleto este año.
+                                </p>
+                                <div class="blog-card-footer">
+                                    <div class="blog-post-meta">
+                                        <span><i data-lucide="calendar"></i> 07 Abr 2026</span>
+                                        <span><i data-lucide="clock"></i> 8 min</span>
+                                    </div>
+                                    <span class="blog-readmore">Leer <i data-lucide="arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Post 4 — Branding -->
+                        <a href="blog/branding-marca-memorable.html" class="blog-card" data-category="branding">
+                            <div class="blog-card-banner cat-branding">
+                                <div class="banner-pattern"></div>
+                                <span class="banner-icon">💎</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-category-badge badge-branding">Branding</span>
+                                <h3 class="blog-card-title">Branding Estratégico: Cómo Crear una Marca que Genera
+                                    Confianza y Cierra Ventas</h3>
+                                <p class="blog-card-excerpt">
+                                    Las personas no compran productos, compran marcas. Descubre cómo construir
+                                    una identidad que inspire confianza y sea imposible de ignorar en tu mercado.
+                                </p>
+                                <div class="blog-card-footer">
+                                    <div class="blog-post-meta">
+                                        <span><i data-lucide="calendar"></i> 31 Mar 2026</span>
+                                        <span><i data-lucide="clock"></i> 6 min</span>
+                                    </div>
+                                    <span class="blog-readmore">Leer <i data-lucide="arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Post 5 — SEO -->
+                        <a href="blog/seo-y-diseno-web.html" class="blog-card" data-category="seo">
+                            <div class="blog-card-banner cat-seo">
+                                <div class="banner-pattern"></div>
+                                <span class="banner-icon">🔍</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-category-badge badge-seo">SEO</span>
+                                <h3 class="blog-card-title">SEO + Diseño Web: La Fórmula que Pone tu Negocio en el Mapa
+                                    de Google</h3>
+                                <p class="blog-card-excerpt">
+                                    Un sitio hermoso que nadie encuentra no genera ventas. Aprende cómo combinar
+                                    diseño profesional con SEO para dominar los resultados de búsqueda.
+                                </p>
+                                <div class="blog-card-footer">
+                                    <div class="blog-post-meta">
+                                        <span><i data-lucide="calendar"></i> 24 Mar 2026</span>
+                                        <span><i data-lucide="clock"></i> 7 min</span>
+                                    </div>
+                                    <span class="blog-readmore">Leer <i data-lucide="arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Post 6 — Marketing Digital -->
+                        <a href="blog/embudo-de-ventas-digital.html" class="blog-card" data-category="marketing">
+                            <div class="blog-card-banner cat-marketing">
+                                <div class="banner-pattern"></div>
+                                <span class="banner-icon">💡</span>
+                            </div>
+                            <div class="blog-card-body">
+                                <span class="blog-category-badge badge-marketing">Marketing Digital</span>
+                                <h3 class="blog-card-title">Embudo de Ventas Digital: Convierte Extraños en Clientes
+                                    Fieles</h3>
+                                <p class="blog-card-excerpt">
+                                    El secreto del crecimiento sostenible no es conseguir más tráfico, sino convertir
+                                    mejor el que ya tienes. Aprende a construir tu embudo de ventas paso a paso.
+                                </p>
+                                <div class="blog-card-footer">
+                                    <div class="blog-post-meta">
+                                        <span><i data-lucide="calendar"></i> 17 Mar 2026</span>
+                                        <span><i data-lucide="clock"></i> 5 min</span>
+                                    </div>
+                                    <span class="blog-readmore">Leer <i data-lucide="arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- /blog-posts-grid -->
+
+                    <!-- CTA FINAL -->
+                    <div class="card blog-cta-card">
+                        <div class="blog-cta-text">
+                            <h3>¿Listo para aplicar estas estrategias? 🚀</h3>
+                            <p>Agenda una consultoría gratuita y diseñamos juntos el plan digital de tu empresa.</p>
+                        </div>
+                        <a href="#" class="btn-primary">Agendar consultoría gratuita</a>
+                    </div>
+
+                </div>
+                <!-- /blog-content -->
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================= -->
+    <!-- FOOTER                        -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                © 2026 Diseñado & Desarrollado por <strong>Yoneison Bayona</strong> · Bayona Agency
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <script>
+        (function () {
+            const filterBtns = document.querySelectorAll('.blog-filter-btn');
+            const featured = document.querySelector('.blog-featured');
+            const cards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+
+                    if (featured) {
+                        featured.style.display = (filter === 'all' || featured.dataset.category === filter) ? '' : 'none';
+                    }
+
+                    cards.forEach(card => {
+                        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+                    });
+                });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

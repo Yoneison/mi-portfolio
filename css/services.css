@@ -1,0 +1,626 @@
+/* ============================= */
+/* SERVICES LAYOUT               */
+/* ============================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.services-sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+/* ============================= */
+/* HERO CARD                     */
+/* ============================= */
+
+.services-hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.services-hero-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.services-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+.services-highlight {
+    color: var(--primary);
+}
+
+.services-intro {
+    font-size: 15px;
+    color: var(--secondary-text);
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.services-intro strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* Available pill (same as about) */
+.available-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.available-pill::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    flex-shrink: 0;
+    animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1;   transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* ============================= */
+/* SERVICES GRID                 */
+/* ============================= */
+
+.srv-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.srv-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    padding: 28px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.srv-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37,99,235,0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.srv-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.srv-card:hover::before {
+    opacity: 1;
+}
+
+.srv-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.srv-card:hover .srv-icon {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.srv-icon svg {
+    width: 26px;
+    height: 26px;
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.srv-card:hover .srv-icon svg {
+    color: #ffffff;
+}
+
+.srv-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.srv-card p {
+    font-size: 12px;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================= */
+/* BRANDS MARQUEE                */
+/* ============================= */
+
+.brands-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.brands-track {
+    display: flex;
+    gap: 12px;
+    width: max-content;
+    animation: brands-scroll 22s linear infinite;
+}
+
+.brands-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes brands-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    min-width: 90px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: default;
+    flex-shrink: 0;
+}
+
+.brand-item:hover {
+    transform: translateY(-3px);
+    background: var(--surface-hover);
+}
+
+.brand-item iconify-icon {
+    font-size: 28px;
+    color: var(--text);
+}
+
+.brand-item span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .brand-item iconify-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ============================= */
+/* CERTIFICADOS                  */
+/* ============================= */
+
+.certs-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.cert-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+
+.cert-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(37, 99, 235, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+.cert-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.cert-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.cert-info strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.cert-info span {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+.cert-badge {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .cert-badge {
+    background: rgba(34, 197, 94, 0.18);
+    color: #4ade80;
+}
+
+.cert-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+}
+
+.cert-link:hover {
+    opacity: 0.7;
+}
+
+.cert-link svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* ============================= */
+/* CATEGORÍAS                    */
+/* ============================= */
+
+.srv-filters-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.srv-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.srv-category-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.srv-category-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.srv-cat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.srv-cat-icon.marketing {
+    background: rgba(239, 68, 68, 0.12);
+    color: #EF4444;
+}
+
+.srv-cat-icon.web {
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--primary);
+}
+
+.srv-cat-icon.ia {
+    background: rgba(139, 92, 246, 0.12);
+    color: #8B5CF6;
+}
+
+.srv-cat-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.srv-category-item div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.srv-category-item strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.srv-category-item span {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+/* ============================= */
+/* CTA CARD                      */
+/* ============================= */
+
+.srv-cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.srv-cta-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.srv-cta-text p {
+    font-size: 14px;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+/* ============================= */
+/* FAQ ACORDEÓN                  */
+/* ============================= */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+.faq-item.open {
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--text);
+}
+
+.faq-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+    color: var(--secondary-text);
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    color: var(--primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: var(--secondary-text);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0 18px 18px;
+}
+
+/* ============================= */
+/* CINTA DENTRO DEL FAQ CARD     */
+/* ============================= */
+
+.faq-bottom-ticker {
+    overflow: hidden;
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    padding: 12px 0;
+    margin: 8px 0 0;
+    border-radius: 12px;
+}
+
+.bottom-ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: bottom-scroll 16s linear infinite;
+}
+
+.bottom-ticker-track:hover {
+    animation-play-state: paused;
+}
+
+.bottom-ticker-track span {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    white-space: nowrap;
+    letter-spacing: -0.3px;
+}
+
+.ticker-dot {
+    color: var(--secondary-text) !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+
+@keyframes bottom-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .srv-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-sidebar {
+        position: static;
+    }
+
+    .srv-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-title {
+        font-size: 24px;
+    }
+
+    .srv-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .srv-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Certificados: badge y link bajan bajo el título */
+    .cert-item {
+        gap: 10px 12px;
+    }
+
+    .cert-icon {
+        align-self: flex-start;
+        margin-top: 2px;
+    }
+
+    .cert-info {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .cert-badge,
+    .cert-link {
+        margin-left: 58px; /* alinea con el texto (44px icono + 14px gap) */
+        flex-shrink: 0;
+    }
+}

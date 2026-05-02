@@ -1,0 +1,416 @@
+/* ============================= */
+/* WORKS GRID LAYOUT             */
+/* ============================= */
+
+.works-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Sidebar fija igual que en about */
+.works-sidebar {
+    position: sticky;
+    top: 90px;
+}
+
+/* Columna derecha: stack vertical */
+.works-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+}
+
+/* ============================= */
+/* CABECERA DE LA SECCIÓN        */
+/* ============================= */
+
+.works-header-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.works-header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.works-title {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.works-highlight {
+    color: var(--primary);
+}
+
+.works-subtitle {
+    font-size: 14px;
+    color: var(--secondary-text);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.available-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.available-pill::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    flex-shrink: 0;
+    animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1;   transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* ============================= */
+/* FILTROS                       */
+/* ============================= */
+
+.works-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 4px;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--secondary-text);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', sans-serif;
+}
+
+.filter-btn:hover {
+    background: var(--surface-hover);
+    color: var(--text);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+/* ============================= */
+/* GRID DE TARJETAS              */
+/* ============================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ============================= */
+/* TARJETA DE PROYECTO           */
+/* ============================= */
+
+.project-card {
+    background: var(--cards);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Imagen del proyecto */
+.project-card-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.project-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-card:hover .project-card-img img {
+    transform: scale(1.04);
+    filter: brightness(0.65);
+}
+
+/* Placeholder cuando no hay imagen */
+.project-card-img--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+}
+
+.placeholder-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Overlay con botón al hacer hover */
+.project-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.project-card:hover .project-card-overlay {
+    opacity: 1;
+}
+
+/* Icono de zoom en el overlay */
+.lightbox-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-card:hover .lightbox-icon {
+    transform: scale(1.1);
+}
+
+.lightbox-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* ============================= */
+/* LIGHTBOX / POPUP              */
+/* ============================= */
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transform: scale(0.93);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-content img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    margin: 0;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.lightbox-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Info inferior de la card */
+.project-card-info {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-tag-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--secondary-text);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.project-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.project-card-desc {
+    font-size: 13px;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================= */
+/* CTA FINAL                     */
+/* ============================= */
+
+.works-cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.works-cta-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.works-cta-text p {
+    font-size: 14px;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 1100px) {
+    .works-grid {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .works-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .works-title {
+        font-size: 22px;
+    }
+
+    .works-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Yoneison Bayona</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/works.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mouse-glow"></div>
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+
+    <!-- ============================= -->
+    <!-- NAVBAR                        -->
+    <!-- ============================= -->
+
+    <header class="header">
+        <div class="container navbar">
+
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html"><i data-lucide="house"></i>Inicio</a></li>
+                    <li><a href="about.html"><i data-lucide="user"></i>Sobre mí</a></li>
+                    <li><a href="services.html"><i data-lucide="layers-3"></i>Servicios</a></li>
+                    <li><a href="works.html" class="active"><i data-lucide="briefcase"></i>Trabajos</a></li>
+                    <li><a href="blog.html"><i data-lucide="pen-line"></i>Blog</a></li>
+                    <li><a href="contact.html"><i data-lucide="message-square"></i>Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="dark-mode-btn" id="theme-toggle"><i data-lucide="moon"></i></button>
+                <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle"><i data-lucide="menu"></i></button>
+
+        </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- MOBILE MENU                   -->
+    <!-- ============================= -->
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2><span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+            <button class="close-menu" id="close-menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html"><i data-lucide="house"></i>Inicio</a>
+            <a href="about.html"><i data-lucide="user"></i>Sobre mí</a>
+            <a href="services.html"><i data-lucide="layers-3"></i>Servicios</a>
+            <a href="works.html" class="active"><i data-lucide="briefcase"></i>Trabajos</a>
+            <a href="blog.html"><i data-lucide="pen-line"></i>Blog</a>
+            <a href="contact.html"><i data-lucide="message-square"></i>Contacto</a>
+        </nav>
+        <div class="mobile-bottom">
+            <button class="mobile-theme" id="mobile-theme-toggle">
+                <i data-lucide="moon"></i>Cambiar apariencia
+            </button>
+            <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- ============================= -->
+    <!-- MAIN                          -->
+    <!-- ============================= -->
+
+    <main class="main">
+        <div class="container">
+            <div class="works-grid">
+
+                <!-- ======================== -->
+                <!-- SIDEBAR — PROFILE CARD   -->
+                <!-- ======================== -->
+
+                <aside class="works-sidebar">
+                    <section class="profile-card card">
+
+                        <div class="profile-image">
+                            <img src="../assets/images/profile.png" alt="Yoneison Bayona">
+                        </div>
+
+                        <div class="profile-info">
+                            <h1>Yoneison Bayona <span>👋</span></h1>
+
+                            <p class="profile-description">
+                                <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo Web</strong>
+                                ayudando a empresas a <strong>crecer</strong>, <strong>vender más</strong> y
+                                <strong>escalar su presencia digital</strong>.
+                            </p>
+
+                            <div class="profile-buttons">
+                                <a href="contact.html" class="btn-primary">Agendar Consultoría</a>
+                                <button class="btn-secondary" onclick="copyEmail()">Copiar Email</button>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/bayonaagency/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/bayonaagency" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://wa.me/573003590390" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                    </section>
+                </aside>
+
+                <!-- ======================== -->
+                <!-- CONTENIDO — PROYECTOS    -->
+                <!-- ======================== -->
+
+                <div class="works-content">
+
+                    <!-- CABECERA -->
+                    <div class="card works-header-card">
+                        <div class="works-header-top">
+                            <div>
+                                <h2 class="works-title">
+                                    Mis últimos <span class="works-highlight">Proyectos</span>
+                                </h2>
+                                <p class="works-subtitle">
+                                    Diseño y desarrollo soluciones digitales que convierten visitantes en clientes.
+                                    Cada proyecto es único, estratégico y orientado a resultados.
+                                </p>
+                            </div>
+                            <span class="available-pill">+300 proyectos</span>
+                        </div>
+
+                        <!-- FILTROS -->
+                        <div class="works-filters" id="worksFilters">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="web">Diseño Web</button>
+                            <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                            <button class="filter-btn" data-filter="app">Aplicaciones</button>
+                            <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                        </div>
+                    </div>
+
+                    <!-- GRID DE PROYECTOS -->
+                    <div class="projects-grid" id="projectsGrid">
+
+                        <!-- Proyecto 1 -->
+                        <article class="project-card" data-category="web">
+                            <div class="project-card-img" data-img="../assets/images/tienda.png"
+                                data-title="Tienda Online — E-commerce">
+                                <img src="../assets/images/tienda.png" alt="Tienda Online">
+                                <div class="project-card-overlay">
+                                    <span class="lightbox-icon"><i data-lucide="zoom-in"></i></span>
+                                </div>
+                            </div>
+                            <div class="project-card-info">
+                                <div class="project-card-tags">
+                                    <span class="project-tag-pill">Diseño Web</span>
+                                    <span class="project-tag-pill">WordPress</span>
+                                </div>
+                                <h3 class="project-card-title">Tienda Online — E-commerce</h3>
+                                <p class="project-card-desc">
+                                    Tienda completa con catálogo de productos, carrito de compras y pasarela de pago
+                                    integrada.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Proyecto 2 -->
+                        <article class="project-card" data-category="app">
+                            <div class="project-card-img" data-img="../assets/images/app-morty.png"
+                                data-title="Rick & Morty App">
+                                <img src="../assets/images/app-morty.png" alt="Rick & Morty App">
+                                <div class="project-card-overlay">
+                                    <span class="lightbox-icon"><i data-lucide="zoom-in"></i></span>
+                                </div>
+                            </div>
+                            <div class="project-card-info">
+                                <div class="project-card-tags">
+                                    <span class="project-tag-pill">JavaScript</span>
+                                    <span class="project-tag-pill">API REST</span>
+                                </div>
+                                <h3 class="project-card-title">Rick & Morty App</h3>
+                                <p class="project-card-desc">
+                                    Aplicación web que consume la API de Rick & Morty con búsqueda y filtros en tiempo
+                                    real.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Proyecto 3 -->
+                        <article class="project-card" data-category="landing">
+                            <div class="project-card-img" data-img="../assets/images/landing-page.png"
+                                data-title="Landing Page — Diseño Web">
+                                <img src="../assets/images/landing-page.png" alt="Landing Page">
+                                <div class="project-card-overlay">
+                                    <span class="lightbox-icon"><i data-lucide="zoom-in"></i></span>
+                                </div>
+                            </div>
+                            <div class="project-card-info">
+                                <div class="project-card-tags">
+                                    <span class="project-tag-pill">Landing Page</span>
+                                    <span class="project-tag-pill">Diseño Web</span>
+                                </div>
+                                <h3 class="project-card-title">Landing Page — Diseño Web</h3>
+                                <p class="project-card-desc">
+                                    Landing page de alta conversión diseñada para captar leads y maximizar el retorno de inversión.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Proyecto 4 -->
+                        <article class="project-card" data-category="ecommerce">
+                            <div class="project-card-img" data-img="../assets/images/woocommerce.png"
+                                data-title="E-commerce — WooCommerce">
+                                <img src="../assets/images/woocommerce.png" alt="E-commerce WooCommerce">
+                                <div class="project-card-overlay">
+                                    <span class="lightbox-icon"><i data-lucide="zoom-in"></i></span>
+                                </div>
+                            </div>
+                            <div class="project-card-info">
+                                <div class="project-card-tags">
+                                    <span class="project-tag-pill">E-commerce</span>
+                                    <span class="project-tag-pill">WooCommerce</span>
+                                </div>
+                                <h3 class="project-card-title">E-commerce — WooCommerce</h3>
+                                <p class="project-card-desc">
+                                    Tienda WooCommerce con gestión de inventario, pagos integrados y optimización para ventas.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Proyecto 5 -->
+                        <article class="project-card" data-category="web">
+                            <div class="project-card-img" data-img="../assets/images/web-corporativa.png"
+                                data-title="Web Corporativa">
+                                <img src="../assets/images/web-corporativa.png" alt="Web Corporativa">
+                                <div class="project-card-overlay">
+                                    <span class="lightbox-icon"><i data-lucide="zoom-in"></i></span>
+                                </div>
+                            </div>
+                            <div class="project-card-info">
+                                <div class="project-card-tags">
+                                    <span class="project-tag-pill">Diseño Web</span>
+                                    <span class="project-tag-pill">HTML / CSS</span>
+                                </div>
+                                <h3 class="project-card-title">Web Corporativa</h3>
+                                <p class="project-card-desc">
+                                    Sitio web corporativo moderno con identidad de marca sólida, optimizado para SEO y conversiones.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Proyecto 6 -->
+                        <article class="project-card" data-category="landing">
+                            <div class="project-card-img" data-img="../assets/images/landing-2.png"
+                                data-title="Landing Page — Campaña Digital">
+                                <img src="../assets/images/landing-2.png" alt="Landing Page Campaña Digital">
+                                <div class="project-card-overlay">
+                                    <span class="lightbox-icon"><i data-lucide="zoom-in"></i></span>
+                                </div>
+                            </div>
+                            <div class="project-card-info">
+                                <div class="project-card-tags">
+                                    <span class="project-tag-pill">Landing Page</span>
+                                    <span class="project-tag-pill">SEO</span>
+                                </div>
+                                <h3 class="project-card-title">Landing Page — Campaña Digital</h3>
+                                <p class="project-card-desc">
+                                    Landing page orientada a campañas digitales con estructura persuasiva y optimización SEO.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                    <!-- /projects-grid -->
+
+                    <!-- CTA FINAL -->
+                    <div class="card works-cta-card">
+                        <div class="works-cta-text">
+                            <h3>¿Tienes un proyecto en mente? 🚀</h3>
+                            <p>Cuéntame tu idea y creamos juntos algo que genere resultados reales.</p>
+                        </div>
+                        <a href="#" class="btn-primary">Trabajemos juntos</a>
+                    </div>
+
+                </div>
+                <!-- /works-content -->
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================= -->
+    <!-- LIGHTBOX                      -->
+    <!-- ============================= -->
+
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <button class="lightbox-close" id="lightboxClose"><i data-lucide="x"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- ============================= -->
+    <!-- FOOTER                        -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                © 2026 Diseñado & Desarrollado por <strong>Yoneison Bayona</strong> · Bayona Agency
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <script>
+        (function () {
+            /* ---- Filtros ---- */
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    cards.forEach(card => {
+                        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+                    });
+                });
+            });
+
+            /* ---- Lightbox ---- */
+            const overlay = document.getElementById('lightboxOverlay');
+            const lbImg = document.getElementById('lightboxImg');
+            const lbCaption = document.getElementById('lightboxCaption');
+            const lbClose = document.getElementById('lightboxClose');
+
+            document.querySelectorAll('.project-card-img[data-img]').forEach(imgWrap => {
+                imgWrap.style.cursor = 'pointer';
+                imgWrap.addEventListener('click', () => {
+                    lbImg.src = imgWrap.dataset.img;
+                    lbImg.alt = imgWrap.dataset.title || '';
+                    lbCaption.textContent = imgWrap.dataset.title || '';
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    lucide.createIcons();
+                });
+            });
+
+            function closeLightbox() {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                lbImg.src = '';
+            }
+
+            lbClose.addEventListener('click', closeLightbox);
+            overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Yoneison Bayona</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mouse-glow"></div>
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+
+    <!-- ============================= -->
+    <!-- NAVBAR                        -->
+    <!-- ============================= -->
+
+    <header class="header">
+        <div class="container navbar">
+
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html"><i data-lucide="house"></i>Inicio</a></li>
+                    <li><a href="about.html"><i data-lucide="user"></i>Sobre mí</a></li>
+                    <li><a href="services.html" class="active"><i data-lucide="layers-3"></i>Servicios</a></li>
+                    <li><a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a></li>
+                    <li><a href="blog.html"><i data-lucide="pen-line"></i>Blog</a></li>
+                    <li><a href="contact.html"><i data-lucide="message-square"></i>Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="dark-mode-btn" id="theme-toggle"><i data-lucide="moon"></i></button>
+                <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle"><i data-lucide="menu"></i></button>
+
+        </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- MOBILE MENU                   -->
+    <!-- ============================= -->
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2><span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+            <button class="close-menu" id="close-menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html"><i data-lucide="house"></i>Inicio</a>
+            <a href="about.html"><i data-lucide="user"></i>Sobre mí</a>
+            <a href="services.html" class="active"><i data-lucide="layers-3"></i>Servicios</a>
+            <a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a>
+            <a href="blog.html"><i data-lucide="pen-line"></i>Blog</a>
+            <a href="contact.html"><i data-lucide="message-square"></i>Contacto</a>
+        </nav>
+        <div class="mobile-bottom">
+            <button class="mobile-theme" id="mobile-theme-toggle">
+                <i data-lucide="moon"></i>Cambiar apariencia
+            </button>
+            <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- ============================= -->
+    <!-- MAIN                          -->
+    <!-- ============================= -->
+
+    <main class="main">
+        <div class="container">
+            <div class="services-grid">
+
+                <!-- ======================== -->
+                <!-- SIDEBAR — PROFILE CARD   -->
+                <!-- ======================== -->
+
+                <aside class="services-sidebar">
+                    <section class="profile-card card">
+
+                        <div class="profile-image">
+                            <img src="../assets/images/profile.png" alt="Yoneison Bayona">
+                        </div>
+
+                        <div class="profile-info">
+                            <h1>Yoneison Bayona <span>👋</span></h1>
+
+                            <p class="profile-description">
+                                <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo Web</strong>
+                                ayudando a empresas a <strong>crecer</strong>, <strong>vender más</strong> y
+                                <strong>escalar su presencia digital</strong>.
+                            </p>
+
+                            <div class="profile-buttons">
+                                <a href="contact.html" class="btn-primary">Agendar Consultoría</a>
+                                <button class="btn-secondary" onclick="copyEmail()">Copiar Email</button>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/bayonaagency/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/bayonaagency" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://wa.me/573003590390" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                    </section>
+                </aside>
+
+                <!-- ======================== -->
+                <!-- CONTENIDO PRINCIPAL      -->
+                <!-- ======================== -->
+
+                <div class="services-content">
+
+                    <!-- HERO -->
+                    <div class="card services-hero-card">
+                        <div class="services-hero-top">
+                            <h2 class="services-title">
+                                Servicios | <span class="services-highlight">Ofrecidos</span>
+                            </h2>
+                            <span class="available-pill">Disponible para trabajar</span>
+                        </div>
+                        <p class="services-intro">
+                            Transformando ideas en estrategias digitales que venden. Soluciones de
+                            <strong>Marketing Digital</strong>, <strong>Publicidad Online</strong> e
+                            <strong>Inteligencia Artificial</strong> enfocadas en resultados reales para tu negocio.
+                        </p>
+                    </div>
+
+                    <!-- GRID DE SERVICIOS -->
+                    <div class="card">
+                        <div class="srv-grid">
+
+                            <!-- Marketing Digital -->
+                            <div class="srv-card" data-category="marketing">
+                                <div class="srv-icon">
+                                    <i data-lucide="megaphone"></i>
+                                </div>
+                                <h4>Meta Ads</h4>
+                                <p>Campañas en Facebook e Instagram con segmentación avanzada para maximizar tu ROI.</p>
+                            </div>
+
+                            <div class="srv-card" data-category="marketing">
+                                <div class="srv-icon">
+                                    <i data-lucide="search"></i>
+                                </div>
+                                <h4>Google Ads</h4>
+                                <p>Anuncios en buscadores, display y YouTube para captar clientes cuando te buscan.</p>
+                            </div>
+
+                            <div class="srv-card" data-category="marketing">
+                                <div class="srv-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <h4>Email Marketing</h4>
+                                <p>Secuencias automatizadas, newsletters y funnels de correo que convierten.</p>
+                            </div>
+
+                            <div class="srv-card" data-category="marketing">
+                                <div class="srv-icon">
+                                    <i data-lucide="bar-chart-2"></i>
+                                </div>
+                                <h4>Estrategia de Contenido</h4>
+                                <p>Planificación editorial y creación de contenido que posiciona tu marca.</p>
+                            </div>
+
+                            <!-- Desarrollo Web -->
+                            <div class="srv-card" data-category="web">
+                                <div class="srv-icon">
+                                    <i data-lucide="code-2"></i>
+                                </div>
+                                <h4>Desarrollo Web</h4>
+                                <p>Sitios web profesionales con HTML, CSS y JavaScript optimizados para conversión.</p>
+                            </div>
+
+                            <div class="srv-card" data-category="web">
+                                <div class="srv-icon">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <h4>WordPress & WooCommerce</h4>
+                                <p>Tiendas online y sitios corporativos en WordPress listos para vender.</p>
+                            </div>
+
+                            <div class="srv-card" data-category="web">
+                                <div class="srv-icon">
+                                    <i data-lucide="monitor"></i>
+                                </div>
+                                <h4>Landing Pages</h4>
+                                <p>Páginas de alta conversión diseñadas para captar leads y cerrar ventas.</p>
+                            </div>
+
+                            <!-- IA -->
+                            <div class="srv-card" data-category="ia">
+                                <div class="srv-icon">
+                                    <i data-lucide="bot"></i>
+                                </div>
+                                <h4>IA & Automatización</h4>
+                                <p>Flujos automatizados con ChatGPT, Claude y n8n para escalar sin más personal.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- HERRAMIENTAS — MARQUEE -->
+                    <div class="card">
+                        <h3 class="srv-filters-title">Herramientas con las que trabajo ✨</h3>
+                        <div class="brands-marquee-wrapper">
+                            <div class="brands-track">
+                                <!-- Original -->
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:meta"></iconify-icon><span>Meta</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:googleads"></iconify-icon><span>Google Ads</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:wordpress"></iconify-icon><span>WordPress</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:openai"></iconify-icon><span>OpenAI</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:anthropic"></iconify-icon><span>Claude</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:mailchimp"></iconify-icon><span>Mailchimp</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:canva"></iconify-icon><span>Canva</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:hubspot"></iconify-icon><span>HubSpot</span></div>
+
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:react"></iconify-icon><span>React</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:nodedotjs"></iconify-icon><span>Node.js</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:figma"></iconify-icon><span>Figma</span></div>
+                                <!-- Duplicado para loop -->
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:meta"></iconify-icon><span>Meta</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:googleads"></iconify-icon><span>Google Ads</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:wordpress"></iconify-icon><span>WordPress</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:openai"></iconify-icon><span>OpenAI</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:anthropic"></iconify-icon><span>Claude</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:mailchimp"></iconify-icon><span>Mailchimp</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:canva"></iconify-icon><span>Canva</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:hubspot"></iconify-icon><span>HubSpot</span></div>
+
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:react"></iconify-icon><span>React</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:nodedotjs"></iconify-icon><span>Node.js</span></div>
+                                <div class="brand-item"><iconify-icon
+                                        icon="simple-icons:figma"></iconify-icon><span>Figma</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICADOS -->
+                    <div class="card">
+                        <h3 class="srv-filters-title">Certificados & Reconocimientos 🎓</h3>
+                        <div class="certs-list">
+
+                            <div class="cert-item">
+                                <div class="cert-icon">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <strong>Desarrollo de Aplicaciones Web con React</strong>
+                                    <span>Certiwise · 2024</span>
+                                </div>
+                                <div class="cert-badge">Completado</div>
+                                <a href="https://certiwise.co/verify/606" target="_blank" class="cert-link">
+                                    Ver certificado <i data-lucide="arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="cert-item">
+                                <div class="cert-icon">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <strong>Fundamentos de Programación</strong>
+                                    <span>Certiwise · 2024</span>
+                                </div>
+                                <div class="cert-badge">Completado</div>
+                                <a href="https://certiwise.co/verify/389" target="_blank" class="cert-link">
+                                    Ver certificado <i data-lucide="arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="cert-item">
+                                <div class="cert-icon">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <div class="cert-info">
+                                    <strong>Back-End con Node.js</strong>
+                                    <span>Certiwise · 2024</span>
+                                </div>
+                                <div class="cert-badge">Completado</div>
+                                <a href="https://certiwise.co/verify/5677" target="_blank" class="cert-link">
+                                    Ver certificado <i data-lucide="arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍAS / FILTROS -->
+                    <div class="card srv-filters-card">
+                        <h3 class="srv-filters-title">Áreas de especialización</h3>
+                        <div class="srv-categories">
+
+                            <div class="srv-category-item">
+                                <div class="srv-cat-icon marketing">
+                                    <i data-lucide="trending-up"></i>
+                                </div>
+                                <div>
+                                    <strong>Marketing Digital</strong>
+                                    <span>Meta Ads · Google Ads · Email · Contenido</span>
+                                </div>
+                            </div>
+
+                            <div class="srv-category-item">
+                                <div class="srv-cat-icon web">
+                                    <i data-lucide="layout"></i>
+                                </div>
+                                <div>
+                                    <strong>Desarrollo Web</strong>
+                                    <span>HTML · CSS · JS · WordPress · Landing Pages</span>
+                                </div>
+                            </div>
+
+                            <div class="srv-category-item">
+                                <div class="srv-cat-icon ia">
+                                    <i data-lucide="cpu"></i>
+                                </div>
+                                <div>
+                                    <strong>Inteligencia Artificial</strong>
+                                    <span>ChatGPT · Claude · Automatización</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="card">
+                        <h3 class="srv-filters-title">Preguntas frecuentes</h3>
+                        <div class="faq-list">
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>¿Qué incluye una consultoría de marketing estratégico?</span>
+                                    <i data-lucide="plus" class="faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Incluye análisis de tu negocio, diagnóstico de tu situación digital, definición
+                                        de objetivos, propuesta de estrategia personalizada y un plan de acción concreto
+                                        para aumentar tus ventas y visibilidad online.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>¿Cuánto tiempo tarda en verse resultados con Meta Ads?</span>
+                                    <i data-lucide="plus" class="faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Los primeros resultados se empiezan a ver entre 7 y 15 días. Sin embargo, para
+                                        optimizar al máximo el rendimiento de las campañas y lograr un ROI consistente,
+                                        se recomienda un período mínimo de 30 a 60 días.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>¿Puedo tener un sitio web profesional con presupuesto limitado?</span>
+                                    <i data-lucide="plus" class="faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Sí. Trabajo con soluciones adaptadas a cada presupuesto. Con WordPress o
+                                        desarrollo personalizado en HTML/CSS podemos construir un sitio profesional,
+                                        rápido y optimizado sin necesidad de grandes inversiones iniciales.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>¿Trabajas con negocios de cualquier tamaño?</span>
+                                    <i data-lucide="plus" class="faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Sí, trabajo con emprendedores, pequeñas empresas y negocios en crecimiento. Mi
+                                        enfoque está en entender tu situación específica y diseñar estrategias
+                                        proporcionales a tus recursos y objetivos.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>¿Cómo funciona la automatización con IA para mi negocio?</span>
+                                    <i data-lucide="plus" class="faq-icon"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Implemento flujos automáticos usando herramientas de IA como ChatGPT y Claude
+                                        para tareas como atención al cliente, generación de contenido, seguimiento de
+                                        leads y respuestas automáticas — ahorrándote tiempo y reduciendo costos
+                                        operativos.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Cinta al fondo de la card -->
+                        <div class="faq-bottom-ticker">
+                            <div class="bottom-ticker-track">
+                                <span>Trabajemos juntos</span>
+                                <span class="ticker-dot">•</span>
+                                <span>Hagamos crecer tu negocio</span>
+                                <span class="ticker-dot">•</span>
+                                <span>Marketing que genera resultados</span>
+                                <span class="ticker-dot">•</span>
+                                <span>Desarrollo web profesional</span>
+                                <span class="ticker-dot">•</span>
+                                <!-- Duplicado -->
+                                <span>Trabajemos juntos</span>
+                                <span class="ticker-dot">•</span>
+                                <span>Hagamos crecer tu negocio</span>
+                                <span class="ticker-dot">•</span>
+                                <span>Marketing que genera resultados</span>
+                                <span class="ticker-dot">•</span>
+                                <span>Desarrollo web profesional</span>
+                                <span class="ticker-dot">•</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="card srv-cta-card">
+                        <div class="srv-cta-text">
+                            <h3>¿Cuál servicio necesitas? 🚀</h3>
+                            <p>Cuéntame tu proyecto y encontramos juntos la mejor solución para tu negocio.</p>
+                        </div>
+                        <a href="#" class="btn-primary">Agendar consultoría gratis</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================= -->
+    <!-- FOOTER                        -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                © 2026 Diseñado & Desarrollado por <strong>Yoneison Bayona</strong> · Bayona Agency
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/services.js"></script>
+    <script>lucide.createIcons();</script>
+
+</body>
+
+</html>

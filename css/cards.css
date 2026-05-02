@@ -1,0 +1,499 @@
+/* ============================= */
+/* BASE CARD                     */
+/* ============================= */
+
+.card {
+    background: var(--cards);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* ============================= */
+/* PROFILE CARD                  */
+/* ============================= */
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    flex: 1;
+    min-height: 220px;
+    background-color: #E8E9EC;
+}
+
+[data-theme="dark"] .profile-image {
+    background-color: #0D1117;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.profile-info h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.profile-role {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.profile-description {
+    font-size: 14px;
+    color: var(--secondary-text);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.profile-description strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.profile-buttons .btn-primary,
+.profile-buttons .btn-secondary {
+    flex: 1;
+}
+
+/* ============================= */
+/* SOCIAL ICONS                  */
+/* ============================= */
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    color: var(--text);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background: var(--surface-hover);
+}
+
+.social-icons a svg {
+    width: 18px;
+    height: 18px;
+}
+
+.social-icons a i {
+    font-size: 18px;
+}
+
+/* ============================= */
+/* EXPERIENCE CARD               */
+/* ============================= */
+
+.experience-card h3,
+.skills-card h3,
+.projects-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+/* Ventana con fade arriba y abajo */
+.experience-scroll-wrapper {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 18%,
+        black 82%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 18%,
+        black 82%,
+        transparent 100%
+    );
+}
+
+/* Track animado — contiene items originales + duplicados */
+.experience-track {
+    display: flex;
+    flex-direction: column;
+    animation: credits-scroll 7s linear infinite;
+}
+
+.experience-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes credits-scroll {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+.experience-track li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.exp-year {
+    font-size: 12px;
+    color: var(--secondary-text);
+    min-width: 72px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.exp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.exp-info strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.exp-info span {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+/* ============================= */
+/* PROJECTS CARD                 */
+/* ============================= */
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.link-primary {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.link-primary:hover {
+    opacity: 0.7;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.project-thumb {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1;
+}
+
+.project-img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-thumb:hover .project-img {
+    transform: scale(1.03);
+    filter: brightness(0.75);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-overlay svg {
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
+
+.project-thumb:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: var(--primary);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* MODAL DE PROYECTOS            */
+/* ============================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box {
+    position: relative;
+    background: var(--cards);
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 860px;
+    width: 100%;
+    border: 1px solid var(--border);
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-close svg {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-img {
+    width: 100%;
+    display: block;
+    max-height: 520px;
+    object-fit: cover;
+}
+
+.modal-info {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.modal-info p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+/* ============================= */
+/* SKILLS CARD                   */
+/* ============================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: default;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    background: var(--surface-hover);
+}
+
+.skill-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 34px;
+    color: var(--text);
+}
+
+.skill-item span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    white-space: nowrap;
+}
+
+/* ============================= */
+/* CTA CARD                      */
+/* ============================= */
+
+.cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+    overflow: hidden;
+}
+
+/* ============================= */
+/* TICKER / CINTA NOTICIERO      */
+/* ============================= */
+
+.ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 9px 0;
+    margin-bottom: 20px;
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.ticker-track {
+    display: inline-flex;
+    gap: 48px;
+    animation: ticker-scroll 18s linear infinite;
+}
+
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+
+.ticker-track span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    flex-shrink: 0;
+}
+
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.badge {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #2563EB;
+    padding: 7px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    width: fit-content;
+}
+
+[data-theme="dark"] .badge {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60A5FA;
+}
+
+.cta-card h2 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.cta-card .link-primary {
+    font-size: 15px;
+    font-weight: 600;
+}

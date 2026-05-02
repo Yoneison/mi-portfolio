@@ -1,0 +1,101 @@
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
+/* Fondo general */
+
+[data-theme="dark"] {
+    background: #0F172A;
+    color: #F8FAFC;
+}
+
+/* Navbar — glass oscuro */
+
+[data-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, 0.72);
+    border-color: rgba(255, 255, 255, 0.07);
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.35),
+        0 1px 3px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Cards + Mobile menu — fondo sólido */
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .mobile-menu {
+    background: #111827;
+    border-color: #1F2937;
+}
+
+/* Menú principal */
+
+[data-theme="dark"] .nav-menu a,
+[data-theme="dark"] .mobile-nav a,
+[data-theme="dark"] .mobile-theme {
+    color: #CBD5E1;
+}
+
+[data-theme="dark"] .nav-menu a:hover,
+[data-theme="dark"] .nav-menu a.active,
+[data-theme="dark"] .mobile-nav a:hover,
+[data-theme="dark"] .mobile-nav a.active {
+    background: #1E293B;
+    color: #ffffff;
+}
+
+/* Textos */
+
+[data-theme="dark"] .logo-text h2,
+[data-theme="dark"] .small-card h3,
+[data-theme="dark"] .profile-card h1,
+[data-theme="dark"] .profile-card h2,
+[data-theme="dark"] .cta-card h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .profile-card p,
+[data-theme="dark"] .small-card ul li,
+[data-theme="dark"] .logo-text span {
+    color: #94A3B8;
+}
+
+/* Botones secundarios */
+
+[data-theme="dark"] .dark-mode-btn,
+[data-theme="dark"] .menu-toggle,
+[data-theme="dark"] .close-menu {
+    background: #1E293B;
+    border-color: #334155;
+    color: #ffffff;
+}
+
+/* Botón secundario blanco */
+
+[data-theme="dark"] .btn-secondary {
+    background: #1E293B;
+    color: #ffffff;
+    border-color: #334155;
+}
+
+/* Tags */
+
+[data-theme="dark"] .tags span {
+    background: #1E293B;
+    border-color: #334155;
+    color: #CBD5E1;
+}
+
+/* Social Icons */
+
+[data-theme="dark"] .social-icons a {
+    background: #1E293B;
+    border-color: #334155;
+    color: #ffffff;
+}
+
+/* Overlay */
+
+[data-theme="dark"] .menu-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}

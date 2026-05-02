@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí | Yoneison Bayona</title>
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="mouse-glow"></div>
+    <div class="bg-shape shape-left"></div>
+    <div class="bg-shape shape-right"></div>
+
+    <!-- ============================= -->
+    <!-- NAVBAR                        -->
+    <!-- ============================= -->
+
+    <header class="header">
+        <div class="container navbar">
+
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2>
+                        <span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../index.html"><i data-lucide="house"></i>Inicio</a></li>
+                    <li><a href="about.html" class="active"><i data-lucide="user"></i>Sobre mí</a></li>
+                    <li><a href="services.html"><i data-lucide="layers-3"></i>Servicios</a></li>
+                    <li><a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a></li>
+                    <li><a href="blog.html"><i data-lucide="pen-line"></i>Blog</a></li>
+                    <li><a href="contact.html"><i data-lucide="message-square"></i>Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="dark-mode-btn" id="theme-toggle"><i data-lucide="moon"></i></button>
+                <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle"><i data-lucide="menu"></i></button>
+
+        </div>
+    </header>
+
+    <!-- ============================= -->
+    <!-- MOBILE MENU                   -->
+    <!-- ============================= -->
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html" class="logo-box">
+                    <div class="logo-icon">B</div>
+                    <div class="logo-text">
+                        <h2>Bayona</h2><span>AGENCY</span>
+                    </div>
+                </a>
+            </div>
+            <button class="close-menu" id="close-menu"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html"><i data-lucide="house"></i>Inicio</a>
+            <a href="about.html" class="active"><i data-lucide="user"></i>Sobre mí</a>
+            <a href="services.html"><i data-lucide="layers-3"></i>Servicios</a>
+            <a href="works.html"><i data-lucide="briefcase"></i>Trabajos</a>
+            <a href="blog.html"><i data-lucide="pen-line"></i>Blog</a>
+            <a href="contact.html"><i data-lucide="message-square"></i>Contacto</a>
+        </nav>
+        <div class="mobile-bottom">
+            <button class="mobile-theme" id="mobile-theme-toggle">
+                <i data-lucide="moon"></i>Cambiar apariencia
+            </button>
+            <a href="contact.html" class="btn-navbar">Hablemos <i data-lucide="arrow-up-right"></i></a>
+        </div>
+    </div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- ============================= -->
+    <!-- MAIN                          -->
+    <!-- ============================= -->
+
+    <main class="main">
+        <div class="container">
+            <div class="about-grid">
+
+                <!-- ======================== -->
+                <!-- SIDEBAR — PROFILE CARD   -->
+                <!-- ======================== -->
+
+                <aside class="about-sidebar">
+                    <section class="profile-card card">
+
+                        <div class="profile-image">
+                            <img src="../assets/images/profile.png" alt="Yoneison Bayona">
+                        </div>
+
+                        <div class="profile-info">
+                            <h1>Yoneison Bayona <span>👋</span></h1>
+
+                            <p class="profile-description">
+                                <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo Web</strong>
+                                ayudando a empresas a <strong>crecer</strong>, <strong>vender más</strong> y
+                                <strong>escalar su presencia digital</strong>.
+                            </p>
+
+                            <div class="profile-buttons">
+                                <a href="contact.html" class="btn-primary">Agendar Consultoría</a>
+                                <button class="btn-secondary" onclick="copyEmail()">Copiar Email</button>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/bayonaagency/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/bayonaagency" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://wa.me/573003590390" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+
+                    </section>
+                </aside>
+
+                <!-- ======================== -->
+                <!-- CONTENIDO PRINCIPAL      -->
+                <!-- ======================== -->
+
+                <div class="about-content">
+
+                    <!-- SECCIÓN 1 — Hero -->
+                    <div class="card about-hero-card">
+                        <div class="about-hero-top">
+                            <h2 class="about-title">
+                                Hola, soy <span class="about-highlight">Yoneison Bayona</span> 👋
+                            </h2>
+                            <span class="available-pill">Disponible para trabajar</span>
+                        </div>
+
+                        <p class="about-intro">
+                            Un apasionado <strong>Consultor de Marketing Estratégico</strong> 📈 & <strong>Desarrollo
+                                Web</strong> con más de <strong>6 años</strong> ayudando a empresas a crecer, vender más
+                            y escalar digitalmente.
+                        </p>
+
+                        <!-- Métricas + scroll indicator -->
+                        <div class="metrics-row">
+
+                            <div class="metrics-inline">
+                                <div class="metric-item">
+                                    <span class="metric-num">+6</span>
+                                    <span class="metric-lbl">Años de experiencia</span>
+                                </div>
+                                <div class="metric-divider"></div>
+                                <div class="metric-item">
+                                    <span class="metric-num">+300</span>
+                                    <span class="metric-lbl">Proyectos realizados</span>
+                                </div>
+                                <div class="metric-divider"></div>
+                                <div class="metric-item">
+                                    <span class="metric-num">+335</span>
+                                    <span class="metric-lbl">Clientes atendidos</span>
+                                </div>
+                            </div>
+
+                            <!-- Círculo giratorio -->
+                            <div class="scroll-indicator">
+                                <svg class="scroll-svg" viewBox="0 0 100 100">
+                                    <defs>
+                                        <path id="scroll-path" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" />
+                                    </defs>
+                                    <text>
+                                        <textPath href="#scroll-path">
+                                            SCROLL DOWN • SCROLL DOWN •
+                                        </textPath>
+                                    </text>
+                                </svg>
+                                <div class="scroll-arrow-center">
+                                    <i data-lucide="arrow-down"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 2 — Herramientas con logos -->
+                    <div class="card">
+                        <h3 class="section-label">Herramientas que domino ✨</h3>
+                        <div class="tools-logos-grid">
+
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:openai" class="tool-logo-icon"></iconify-icon>
+                                <span>OpenAI</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:anthropic" class="tool-logo-icon"></iconify-icon>
+                                <span>Claude</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:meta" class="tool-logo-icon"></iconify-icon>
+                                <span>Meta Ads</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:googleads" class="tool-logo-icon"></iconify-icon>
+                                <span>Google Ads</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:wordpress" class="tool-logo-icon"></iconify-icon>
+                                <span>WordPress</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:mailchimp" class="tool-logo-icon"></iconify-icon>
+                                <span>Mailchimp</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:canva" class="tool-logo-icon"></iconify-icon>
+                                <span>Canva</span>
+                            </div>
+                            <div class="tool-logo-item">
+                                <iconify-icon icon="simple-icons:hubspot" class="tool-logo-icon"></iconify-icon>
+                                <span>HubSpot</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 3 — Testimonios -->
+                    <div class="card">
+                        <div class="section-header-row">
+                            <h3 class="section-label">Lo que dicen mis clientes</h3>
+                            <div class="testi-nav">
+                                <button class="testi-btn" id="testiPrev"><i data-lucide="arrow-left"></i></button>
+                                <button class="testi-btn" id="testiNext"><i data-lucide="arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="testi-slider-wrapper">
+                            <div class="testi-track" id="testiTrack">
+
+                                <div class="testimonial-card">
+                                    <div class="testi-stars">★★★★★</div>
+                                    <p>"Yoneison transformó nuestra presencia digital. Las ventas aumentaron un 40% en 3
+                                        meses gracias a su estrategia de marketing."</p>
+                                    <div class="testi-author">
+                                        <strong>Carlos M.</strong>
+                                        <span>CEO · Tienda Online</span>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-card">
+                                    <div class="testi-stars">★★★★★</div>
+                                    <p>"Excelente trabajo en el desarrollo de nuestra web. Profesional, puntual y los
+                                        resultados superaron nuestras expectativas."</p>
+                                    <div class="testi-author">
+                                        <strong>María L.</strong>
+                                        <span>Directora · Clínica Estética</span>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-card">
+                                    <div class="testi-stars">★★★★★</div>
+                                    <p>"Desde que Yoneison rediseñó nuestra web y manejó nuestras redes, los pedidos de
+                                        flores aumentaron notablemente. ¡Muy recomendado!"</p>
+                                    <div class="testi-author">
+                                        <strong>Isabel R.</strong>
+                                        <span>Propietaria · Floristería Isabel · Barranquilla</span>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-card">
+                                    <div class="testi-stars">★★★★★</div>
+                                    <p>"Gracias a la estrategia digital que diseñó Yoneison, duplicamos las reservas de
+                                        nuestro restaurante en menos de 2 meses."</p>
+                                    <div class="testi-author">
+                                        <strong>Roberto S.</strong>
+                                        <span>Gerente · Restaurante El Sabor</span>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial-card">
+                                    <div class="testi-stars">★★★★★</div>
+                                    <p>"Su trabajo en automatización de ventas cambió completamente la forma en que
+                                        captamos clientes. Resultados reales desde el primer mes."</p>
+                                    <div class="testi-author">
+                                        <strong>Andrea P.</strong>
+                                        <span>Fundadora · Academia de Baile Ritmo</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 4 — CTA -->
+                    <div class="card about-cta-card">
+                        <div class="about-cta-text">
+                            <h3>¿Listo para escalar tu negocio? 🚀</h3>
+                            <p>Agenda una consultoría gratuita y diseñamos juntos tu estrategia digital.</p>
+                        </div>
+                        <a href="#" class="btn-primary">Trabajemos juntos</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================= -->
+    <!-- FOOTER                        -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                © 2026 Diseñado & Desarrollado por <strong>Yoneison Bayona</strong> · Bayona Agency
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <script>
+        (function () {
+            const wrapper = document.querySelector('.testi-slider-wrapper');
+            const track = document.getElementById('testiTrack');
+            const cards = Array.from(track.querySelectorAll('.testimonial-card'));
+            const prevBtn = document.getElementById('testiPrev');
+            const nextBtn = document.getElementById('testiNext');
+            const GAP = 16;
+            const INTERVAL = 3500;
+            let current = 0;
+            let timer = null;
+
+            function getVisible() {
+                return window.innerWidth <= 768 ? 1 : 2;
+            }
+
+            function maxIndex() {
+                return cards.length - getVisible();
+            }
+
+            function update(animate = true) {
+                const visible = getVisible();
+                const cardWidth = (wrapper.offsetWidth - GAP * (visible - 1)) / visible;
+                cards.forEach(c => c.style.width = cardWidth + 'px');
+
+                if (!animate) track.style.transition = 'none';
+                track.style.transform = `translateX(-${current * (cardWidth + GAP)}px)`;
+                if (!animate) requestAnimationFrame(() => track.style.transition = '');
+            }
+
+            function next() {
+                current = current < maxIndex() ? current + 1 : 0;
+                update();
+            }
+
+            function prev() {
+                current = current > 0 ? current - 1 : maxIndex();
+                update();
+            }
+
+            // Auto-play
+            function startAuto() {
+                timer = setInterval(next, INTERVAL);
+            }
+
+            function stopAuto() {
+                clearInterval(timer);
+            }
+
+            // Pausar con mouse
+            wrapper.addEventListener('mouseenter', stopAuto);
+            wrapper.addEventListener('mouseleave', startAuto);
+
+            // Botones manuales
+            prevBtn.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
+            nextBtn.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+
+            window.addEventListener('resize', () => {
+                current = Math.min(current, maxIndex());
+                update(false);
+            });
+
+            update();
+            startAuto();
+        })();
+    </script>
+
+</body>
+
+</html>
