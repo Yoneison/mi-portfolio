@@ -20,9 +20,8 @@
     }
 
     .bento-grid .experience-card,
-    .bento-grid .projects-card,
     .bento-grid .skills-card,
-    .bento-grid .cta-card {
+    .bento-grid .right-card {
         grid-column: auto;
         grid-row: auto;
     }
@@ -37,8 +36,12 @@
         grid-template-columns: 1fr;
     }
 
-    .bento-grid .profile-card {
+    .bento-grid .profile-card,
+    .bento-grid .experience-card,
+    .bento-grid .skills-card,
+    .bento-grid .right-card {
         grid-column: 1;
+        grid-row: auto;
     }
 
     .card {

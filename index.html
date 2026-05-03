@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoneison Bayona | Consultor de Marketing Estratégico</title>
 
@@ -135,7 +138,7 @@
                 <section class="profile-card card">
 
                     <div class="profile-image">
-                        <img src="assets/images/profile.png" alt="Yoneison Bayona">
+                        <img src="assets/images/profile.png" alt="Yoneison Bayona" fetchpriority="high">
                     </div>
 
                     <div class="profile-info">
@@ -283,7 +286,7 @@
 
                         <div class="project-thumb"
                             onclick="openModal('assets/images/tienda.png', 'Tienda Online', 'Desarrollo Web')">
-                            <img src="assets/images/tienda.png" alt="Tienda Online" class="project-img">
+                            <img loading="lazy" src="assets/images/tienda.png" alt="Tienda Online" class="project-img">
                             <div class="project-overlay">
                                 <i data-lucide="zoom-in"></i>
                             </div>
@@ -292,7 +295,7 @@
 
                         <div class="project-thumb"
                             onclick="openModal('assets/images/app-morty.png', 'Rick & Morty App', 'JavaScript / API')">
-                            <img src="assets/images/app-morty.png" alt="Rick & Morty App" class="project-img">
+                            <img loading="lazy" src="assets/images/app-morty.png" alt="Rick & Morty App" class="project-img">
                             <div class="project-overlay">
                                 <i data-lucide="zoom-in"></i>
                             </div>
@@ -347,7 +350,7 @@
             <button class="modal-close" onclick="closeModal()">
                 <i data-lucide="x"></i>
             </button>
-            <img src="" alt="" id="modalImg" class="modal-img">
+            <img loading="lazy" src="" alt="" id="modalImg" class="modal-img">
             <div class="modal-info">
                 <span class="project-tag" id="modalTag"></span>
                 <p id="modalTitle"></p>
