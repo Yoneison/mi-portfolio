@@ -1,3 +1,6 @@
+# Consolidar dominio: www → non-www (previene loops y unsafe navigation)
+https://www.bayonaagency.com/*  https://bayonaagency.com/:splat  301!
+
 # Compatibilidad hacia atrás: URLs antiguas /pages/ → URLs limpias
 /pages/about.html                            /about/                         301!
 /pages/services.html                         /services/                      301!

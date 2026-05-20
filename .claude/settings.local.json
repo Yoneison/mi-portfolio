@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\BayonaDev\\\\Desktop\\\\portafolio-final\" -Recurse -File)",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}
