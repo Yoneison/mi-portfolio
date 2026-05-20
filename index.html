@@ -378,17 +378,18 @@
         </div>
     </div>
 
-    <!-- Lucide (iconos UI) -->
-    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide (iconos UI) — sin defer para render inmediato -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 
     <!-- Iconify (logos de marcas) -->
     <script defer src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 
     <!-- JAVASCRIPT PRINCIPAL -->
-    <script defer src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- ANIMACIONES -->
-    <script defer src="js/animations.js"></script>
+    <script src="js/animations.js"></script>
 
     <script>
         function openModal(src, title, tag) {
