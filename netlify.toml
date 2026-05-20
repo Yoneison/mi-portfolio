@@ -2,6 +2,12 @@
   publish = "."
   command = ""
 
+[[redirects]]
+  from   = "https://www.bayonaagency.com/*"
+  to     = "https://bayonaagency.com/:splat"
+  status = 301
+  force  = true
+
 [[headers]]
   for = "/*"
   [headers.values]
