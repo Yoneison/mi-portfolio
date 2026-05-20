@@ -210,8 +210,11 @@
                         <div class="contact-section-block">
                             <h3 class="contact-section-label">Envíame un mensaje ✉️</h3>
 
-                            <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify novalidate>
+                            <form class="contact-form" id="contactForm" name="contact" method="POST" action="/contact/?enviado=1" data-netlify="true" netlify netlify-honeypot="bot-field" novalidate>
                                 <input type="hidden" name="form-name" value="contact">
+                                <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                                    <input name="bot-field" tabindex="-1" autocomplete="off">
+                                </div>
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label class="form-label" for="nombre">Nombre</label>
@@ -386,6 +389,14 @@
     
 
     <script>
+        // Mostrar éxito cuando Netlify redirige de vuelta con ?enviado=1
+        if (window.location.search.indexOf('enviado=1') !== -1) {
+            var contactForm = document.getElementById('contactForm');
+            var formSuccess = document.getElementById('formSuccess');
+            if (contactForm) contactForm.style.display = 'none';
+            if (formSuccess) formSuccess.classList.add('active');
+        }
+
         // FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(function (btn) {
             btn.addEventListener('click', function () {
@@ -399,7 +410,7 @@
             });
         });
 
-        // Form — validación + envío a Netlify Forms
+        // Validación — el submit nativo va directo a Netlify
         (function () {
             var fields = [
                 { id: 'nombre',  errId: 'err-nombre',  validate: function (v) { return v.trim().length > 0; } },
@@ -428,53 +439,15 @@
                 return ok;
             }
 
-            var btnOriginalHTML = document.querySelector('.btn-send').innerHTML;
-
-            document.getElementById('contactForm').addEventListener('submit', async function (e) {
-                e.preventDefault();
-
-                if (!validateAll()) return;
-
-                var form = this;
-                var btn = form.querySelector('.btn-send');
-
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                if (!validateAll()) {
+                    e.preventDefault();
+                    return;
+                }
+                var btn = this.querySelector('.btn-send');
                 btn.disabled = true;
                 btn.innerHTML = 'Enviando...';
-
-                try {
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(function () { controller.abort(); }, 15000);
-
-                    var response = await fetch('/', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: new URLSearchParams(new FormData(form)).toString(),
-                        signal: controller.signal
-                    });
-
-                    clearTimeout(timeoutId);
-
-                    if (response.ok) {
-                        form.style.display = 'none';
-                        var success = document.getElementById('formSuccess');
-                        success.classList.add('active');
-                        lucide.createIcons();
-                    } else {
-                        btn.disabled = false;
-                        btn.innerHTML = btnOriginalHTML;
-                        lucide.createIcons();
-                        alert('Error al enviar (' + response.status + '). Por favor intenta de nuevo.');
-                    }
-                } catch (err) {
-                    btn.disabled = false;
-                    btn.innerHTML = btnOriginalHTML;
-                    lucide.createIcons();
-                    if (err.name === 'AbortError') {
-                        alert('La solicitud tardó demasiado. Por favor intenta de nuevo.');
-                    } else {
-                        alert('Error de red. Verifica tu conexión e intenta de nuevo.');
-                    }
-                }
+                // El form se envía nativamente — Netlify lo intercepta
             });
         })();
     </script>
