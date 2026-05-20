@@ -1,13 +1,9 @@
-# www → non-www canonical (evita loop y ERR_CONNECTION_RESET)
-https://www.bayonaagency.com/*  https://bayonaagency.com/:splat  301!
-
-# Compatibilidad hacia atrás: URLs antiguas /pages/ → URLs limpias
+# Legacy: URLs antiguas → URLs limpias
 /pages/about.html                            /about/                         301!
 /pages/services.html                         /services/                      301!
 /pages/works.html                            /works/                         301!
 /pages/blog.html                             /blog/                          301!
 /pages/contact.html                          /contact/                       301!
-
 /pages/blog/diseno-web-que-vende.html        /blog/diseno-web-que-vende/     301!
 /pages/blog/marketing-digital-pymes.html     /blog/marketing-digital-pymes/  301!
 /pages/blog/ux-ui-secreto-exito.html         /blog/ux-ui-secreto-exito/      301!
