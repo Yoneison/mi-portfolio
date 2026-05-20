@@ -39,9 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     const glow = document.querySelector(".mouse-glow");
+    if (!glow) return;
+
+    let lastX = 0, lastY = 0, ticking = false;
 
     document.addEventListener("mousemove", (e) => {
-        glow.style.left = `${e.clientX}px`;
-        glow.style.top = `${e.clientY}px`;
+        lastX = e.clientX;
+        lastY = e.clientY;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                glow.style.left = `${lastX}px`;
+                glow.style.top = `${lastY}px`;
+                ticking = false;
+            });
+            ticking = true;
+        }
     });
 });

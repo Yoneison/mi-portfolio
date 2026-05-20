@@ -428,11 +428,17 @@
                 btn.textContent = 'Enviando...';
 
                 try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 10000);
+
                     var response = await fetch('https://formsubmit.co/ajax/yoneisonbayona@gmail.com', {
                         method: 'POST',
                         headers: { 'Accept': 'application/json' },
-                        body: new FormData(form)
+                        body: new FormData(form),
+                        signal: controller.signal
                     });
+
+                    clearTimeout(timeoutId);
 
                     if (response.ok) {
                         form.style.display = 'none';
