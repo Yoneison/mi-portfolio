@@ -9,18 +9,34 @@
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="preconnect" href="https://code.iconify.design">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultor de Marketing Estratégico y Desarrollo Web. Ayudo a empresas a crecer digitalmente con estrategias efectivas. Agenda tu consultoría gratuita.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bayonaagency.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yoneison Bayona | Consultor de Marketing Estratégico">
+    <meta property="og:description" content="Consultor de Marketing Estratégico y Desarrollo Web. Ayudo a empresas a crecer digitalmente con estrategias efectivas. Agenda tu consultoría gratuita.">
+    <meta property="og:url" content="https://bayonaagency.com/">
+    <meta property="og:image" content="https://bayonaagency.com/assets/images/optimized/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yoneison Bayona | Consultor de Marketing Estratégico">
+    <meta name="twitter:description" content="Consultor de Marketing Estratégico y Desarrollo Web. Ayudo a empresas a crecer digitalmente con estrategias efectivas. Agenda tu consultoría gratuita.">
     <title>Yoneison Bayona | Consultor de Marketing Estratégico</title>
 
     <!-- Google Fonts -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preload" as="image" href="assets/images/optimized/profile.jpg" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome (iconos de redes sociales) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Yoneison Bayona","jobTitle":"Consultor de Marketing Estratégico","url":"https://bayonaagency.com","image":"https://bayonaagency.com/assets/images/optimized/profile.jpg","sameAs":["https://www.linkedin.com/in/yoneisonabayona/","https://wa.me/573003590390"],"knowsAbout":["Marketing Digital","Desarrollo Web","SEO","E-commerce","Google Ads"]}
+    </script>
 </head>
 
 <body>
@@ -141,7 +157,7 @@
                 <section class="profile-card card">
 
                     <div class="profile-image">
-                        <img src="assets/images/optimized/profile.jpg" alt="Yoneison Bayona" fetchpriority="high">
+                        <img src="assets/images/optimized/profile.jpg" alt="Yoneison Bayona" width="400" height="400" fetchpriority="high">
                     </div>
 
                     <div class="profile-info">
@@ -289,7 +305,7 @@
 
                         <div class="project-thumb"
                             onclick="openModal('assets/images/optimized/tienda-large.jpg', 'Tienda Online', 'Desarrollo Web')">
-                            <img loading="lazy" src="assets/images/optimized/tienda-thumb.jpg" alt="Tienda Online" class="project-img">
+                            <img loading="lazy" src="assets/images/optimized/tienda-thumb.jpg" alt="Tienda Online" width="600" height="400" class="project-img">
                             <div class="project-overlay">
                                 <i data-lucide="zoom-in"></i>
                             </div>
@@ -298,7 +314,7 @@
 
                         <div class="project-thumb"
                             onclick="openModal('assets/images/optimized/app-morty-large.jpg', 'Rick & Morty App', 'JavaScript / API')">
-                            <img loading="lazy" src="assets/images/optimized/app-morty-thumb.jpg" alt="Rick & Morty App"
+                            <img loading="lazy" src="assets/images/optimized/app-morty-thumb.jpg" alt="Rick &amp; Morty App" width="600" height="400"
                                 class="project-img">
                             <div class="project-overlay">
                                 <i data-lucide="zoom-in"></i>
@@ -363,21 +379,16 @@
     </div>
 
     <!-- Lucide (iconos UI) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Iconify (logos de marcas) -->
-    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script defer src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 
     <!-- JAVASCRIPT PRINCIPAL -->
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 
     <!-- ANIMACIONES -->
-    <script src="js/animations.js"></script>
-
-    <!-- INICIALIZAR ICONOS -->
-    <script>
-        lucide.createIcons();
-    </script>
+    <script defer src="js/animations.js"></script>
 
     <script>
         function openModal(src, title, tag) {

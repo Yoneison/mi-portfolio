@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Lucide icons (deferred script is ready by DOMContentLoaded)
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
     const themeToggle = document.getElementById("theme-toggle");
     const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
     const html = document.documentElement;
