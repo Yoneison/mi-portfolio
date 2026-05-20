@@ -210,10 +210,8 @@
                         <div class="contact-section-block">
                             <h3 class="contact-section-label">Envíame un mensaje ✉️</h3>
 
-                            <form class="contact-form" id="contactForm" novalidate>
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_template" value="table">
-                                <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+                            <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" novalidate>
+                                <input type="hidden" name="form-name" value="contact">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label class="form-label" for="nombre">Nombre</label>
@@ -401,7 +399,7 @@
             });
         });
 
-        // Form — validación + envío a FormSubmit
+        // Form — validación + envío a Netlify Forms
         (function () {
             var fields = [
                 { id: 'nombre',  errId: 'err-nombre',  validate: function (v) { return v.trim().length > 0; } },
@@ -410,7 +408,6 @@
                 { id: 'mensaje', errId: 'err-mensaje', validate: function (v) { return v.trim().length > 0; } }
             ];
 
-            // Limpiar error al escribir
             fields.forEach(function (f) {
                 document.getElementById(f.id).addEventListener('input', function () {
                     this.classList.remove('is-error');
@@ -431,6 +428,8 @@
                 return ok;
             }
 
+            var btnOriginalHTML = document.querySelector('.btn-send').innerHTML;
+
             document.getElementById('contactForm').addEventListener('submit', async function (e) {
                 e.preventDefault();
 
@@ -440,16 +439,16 @@
                 var btn = form.querySelector('.btn-send');
 
                 btn.disabled = true;
-                btn.textContent = 'Enviando...';
+                btn.innerHTML = 'Enviando...';
 
                 try {
                     const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 10000);
+                    const timeoutId = setTimeout(function () { controller.abort(); }, 15000);
 
-                    var response = await fetch('https://formsubmit.co/ajax/yoneisonbayona@gmail.com', {
+                    var response = await fetch('/contact/', {
                         method: 'POST',
-                        headers: { 'Accept': 'application/json' },
-                        body: new FormData(form),
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(new FormData(form)).toString(),
                         signal: controller.signal
                     });
 
@@ -462,13 +461,19 @@
                         lucide.createIcons();
                     } else {
                         btn.disabled = false;
-                        btn.textContent = 'Enviar mensaje';
-                        alert('Ocurrió un error. Por favor intenta de nuevo.');
+                        btn.innerHTML = btnOriginalHTML;
+                        lucide.createIcons();
+                        alert('Error al enviar (' + response.status + '). Por favor intenta de nuevo.');
                     }
                 } catch (err) {
                     btn.disabled = false;
-                    btn.textContent = 'Enviar mensaje';
-                    alert('Sin conexión. Por favor intenta de nuevo.');
+                    btn.innerHTML = btnOriginalHTML;
+                    lucide.createIcons();
+                    if (err.name === 'AbortError') {
+                        alert('La solicitud tardó demasiado. Por favor intenta de nuevo.');
+                    } else {
+                        alert('Error de red. Verifica tu conexión e intenta de nuevo.');
+                    }
                 }
             });
         })();
