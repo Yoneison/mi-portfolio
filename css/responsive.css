@@ -6,11 +6,6 @@
     .bento-grid {
         grid-template-columns: 300px 1fr 1fr;
     }
-
-    .profile-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
 
 @media (max-width: 900px) {
@@ -29,11 +24,6 @@
     .bento-grid .right-card {
         grid-column: auto;
         grid-row: auto;
-    }
-
-    .profile-buttons {
-        flex-direction: row;
-        gap: 12px;
     }
 }
 
@@ -72,18 +62,9 @@
 }
 
 @media (max-width: 540px) {
-    .profile-buttons {
-        gap: 8px;
-    }
-
     .profile-buttons .btn-primary,
     .profile-buttons .btn-secondary {
-        flex: 1;
-        min-width: 0;
         padding: 11px 8px;
-        font-size: 13px;
-        white-space: nowrap;
-        line-height: 1.2;
     }
 }
 
@@ -96,5 +77,6 @@
     .profile-buttons .btn-secondary {
         padding: 10px 6px;
         font-size: 12px;
+        gap: 5px;
     }
 }
