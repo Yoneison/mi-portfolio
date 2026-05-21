@@ -668,11 +668,16 @@ img {
     margin-bottom: 24px;
     flex: 1;
     min-height: 220px;
-    background-color: #E8E9EC;
+    background: linear-gradient(165deg, #EFEFEF 0%, #E6E6E8 100%);
+    position: relative;
 }
 
 [data-theme="dark"] .profile-image {
-    background-color: #0D1117;
+    background: #0E1018;
+}
+
+[data-theme="dark"] .profile-image img {
+    mix-blend-mode: normal;
 }
 
 .profile-image img {
@@ -681,10 +686,11 @@ img {
     object-fit: cover;
     object-position: top center;
     display: block;
+    mix-blend-mode: multiply;
 }
 
 .profile-info h1 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: var(--text);
     margin-bottom: 10px;
@@ -1374,6 +1380,10 @@ img {
     .bento-grid {
         grid-template-columns: 300px 1fr 1fr;
     }
+
+    .profile-info h1 {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1393,8 +1403,11 @@ img {
         grid-column: auto;
         grid-row: auto;
     }
-}
 
+    .profile-info h1 {
+        font-size: 26px;
+    }
+}
 
 @media (max-width: 768px) {
     .nav-menu {
@@ -1419,10 +1432,6 @@ img {
 
     .main {
         padding: 20px 0 32px;
-    }
-
-    .profile-info h1 {
-        font-size: 26px;
     }
 
     .cta-card h2 {

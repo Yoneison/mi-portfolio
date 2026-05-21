@@ -6,6 +6,10 @@
     .bento-grid {
         grid-template-columns: 300px 1fr 1fr;
     }
+
+    .profile-info h1 {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -24,6 +28,10 @@
     .bento-grid .right-card {
         grid-column: auto;
         grid-row: auto;
+    }
+
+    .profile-info h1 {
+        font-size: 28px;
     }
 }
 
